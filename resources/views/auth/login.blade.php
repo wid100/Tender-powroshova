@@ -81,9 +81,6 @@
     @include('layouts.backend.js')
 @endsection --}}
 
-
-
-
 {{-- =============login =========== --}}
 @extends('layouts.user.master')
 
@@ -131,14 +128,13 @@
                                         Remember me
                                     </label>
                                 </div>
-                               
-                                  @if (Route::has('password.request'))
-                                                <a href="{{ route('password.request') }}"
-                                                    class="forget-pass">Forget password</a>
-                                            @endif
-                                <button type="button" class="custom-btn w-100">LOGIN</button>
+
+                                @if (Route::has('password.request'))
+                                    <a href="{{ route('password.request') }}" class="forget-pass">Forget password</a>
+                                @endif
+                                <button type="submit" class="custom-btn w-100">LOGIN</button>
                                 <p class="login-footer">Are you a new user?</p>
-                                <a href="{{route('register')}}" class="custom-btn mt-2 text-center w-100">
+                                <a href="{{ route('register') }}" class="custom-btn mt-2 text-center w-100">
                                     SIGN UP
                                 </a>
                             </form>
