@@ -1,0 +1,35 @@
+.log-in-form h2 {
+    text-align: center;
+  }
+.login-header{
+    color: #004382;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px 0 40px 0;
+  }
+.forget-pass{
+    text-align: end;
+    padding: 0 0 10px 0;
+}  
+.forget-pass a{
+    color: #555;
+    text-decoration: underline;
+}
+.login-footer{
+    text-align: center;
+    padding: 10px 0 0 0;
+}
+.signup-button a{
+    color: #ffffff;
+
+}
+.form-label{
+    font-weight: 500;
+    font-size: 16px;
+}
+.form-input-fuild{
+    width: 100%;
+}
+.form-input-fuild .intl-tel-input{
+    width: 100%;
+}

@@ -1,0 +1,137 @@
+@font-face {
+  font-family: Arial;
+  src: url(/assets/font/fonts/arial.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+/*===== VARIABLES CSS =====*/
+
+:root {
+  /*========== Colors ==========*/
+  --main-color: #004382;
+  --second-color: #fd8b04;
+  --black-color: #616161;
+  --title-color: #393939;
+  --white-color: #ffffff;
+      --ash-color: #5C5E61;
+    --ash-color-2:#d9d9d9;
+  /*========== Font and typography ==========*/
+  --body-font: "Arial", sans-serif;
+  --sec-title-font: 25px;
+  --p-font: 17px;
+  --m-title: 30.25px;
+  --l-title: 36.79px;
+  --p-font-height: 27px;
+  --lp-font-height: 25px;
+  --title-font: 40px;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /*========== Margin ==========*/
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* ==================CSS Variable END========= */
+
+/*========== BASE ==========*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--black-color);
+  font-size: var(--p-font);
+  font-weight: 400;
+  background: var(--white-color);
+  font-family: var(--body-font);
+  line-height: var(--p-font-height);
+  overflow-x: hidden;
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* ============================GENERAL STYLE END======= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+span,
+label {
+  margin: 0;
+}
+
+.ovh {
+  overflow: hidden;
+}
+
+.custom-btn {
+  background: var(--second-color);
+  padding: 6px 20px;
+  border-radius: 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--white-color);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  border: none;
+}
+
+.custom-btn:hover {
+  background: #de7a01;
+}
+
+.btn:focus {
+  outline: 0px;
+  box-shadow: none;
+}
