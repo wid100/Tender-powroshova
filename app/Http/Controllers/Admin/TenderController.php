@@ -47,17 +47,13 @@ class TenderController extends Controller
             'end_date' => 'required|string',
             'method' => 'nullable|string',
         ]);
-        // Generate a unique 8-digit random number
         $tenderId = Str::random(8);
 
-        // Append the current date to the random number
         $tenderId .= date('Ymd');
 
-        // Extract only the numerical part from the generated string
         $tenderId = preg_replace("/[^0-9]/", "", $tenderId);
         $tender_status = $request->has('status') ? 1 : 0;
 
-        // Create a new tender instance
         $tender = new Tender();
         $tender->name = $validatedData['name'];
         $tender->description = $validatedData['description'];
@@ -69,10 +65,8 @@ class TenderController extends Controller
         $tender->status = $tender_status;
 
         $tender->user_id = auth()->user()->id;
-        // Save the tender
         $tender->save();
 
-        // Redirect or return a response as per your application flow
         return redirect()->route('admin.tender.index')->with('success', 'Tender created successfully');
     }
 
@@ -108,10 +102,8 @@ class TenderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // Find the tender by ID
         $tender = Tender::findOrFail($id);
 
-        // Validate the incoming request data
         $validatedData = $request->validate([
             'name' => 'required|string',
             'description' => 'nullable|string',
@@ -119,7 +111,7 @@ class TenderController extends Controller
             'start_date' => 'required|string',
             'end_date' => 'required|string',
             'method' => 'nullable|string',
-            'status' => 'nullable|boolean', // Assuming status can be updated
+            'status' => 'nullable|boolean',
         ]);
 
         // Update the tender attributes
@@ -130,15 +122,12 @@ class TenderController extends Controller
         $tender->end_date = $validatedData['end_date'];
         $tender->method = $validatedData['method'];
 
-        // Update the status if provided in the request
         if ($request->has('status')) {
             $tender->status = $validatedData['status'];
         }
 
-        // Save the updated tender
         $tender->save();
 
-        // Redirect or return a response as per your application flow
         return redirect()->route('admin.tender.index')->with('success', 'Tender updated successfully');
     }
 
@@ -151,6 +140,8 @@ class TenderController extends Controller
      */
     public function destroy(Tender $tender)
     {
-        //
+        $tender->delete();
+
+        return redirect()->route('admin.tender.index')->with('success', 'Tender deleted successfully');
     }
 }
