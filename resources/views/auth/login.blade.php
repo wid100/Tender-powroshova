@@ -1,7 +1,7 @@
 {{-- @extends('layouts.app')
-@include('layouts.backend.style')
+@include('layouts.backend.style') --}}
 
-@section('content')
+{{-- @section('content')
     <div class="main-wrapper">
         <div class="page-wrapper full-page">
             <div class="page-content d-flex align-items-center justify-content-center">

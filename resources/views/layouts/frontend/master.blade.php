@@ -23,9 +23,9 @@
                 @include('layouts.frontend.footer')
         </div>
     </div>
-      @include('layouts.frontend.js')
+     
 </div>
-
+ @include('layouts.frontend.js')
 </body>
 
 </html>
