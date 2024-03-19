@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\TenderController as TenderController;
 use App\Http\Controllers\User\DashboardController as UserDashboardController;
 use App\Http\Controllers\HomeController;
 
@@ -22,22 +23,25 @@ Auth::routes();
 
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::namespace('App\Http\Controllers')->group(function () {
-    Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {
-        Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+Route::
+        namespace('App\Http\Controllers')->group(function () {
+            Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {
+                Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
-        Route::resource('tender', 'TenderController');
-    });
-});
+                Route::resource('tender', 'TenderController');
+            });
+        });
 
 // ================================user AND ROUTE=============
-Route::namespace('App\Http\Controllers')->group(
-    function () {
-        Route::group(['as' => 'user.', 'prefix' => 'user', 'namespace' => 'User', 'middleware' => ['auth', 'user']], function () {
-            Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
-            Route::get('/user-mangement', [UserDashboardController::class, 'userMangement'])->name('user-mangement');
-            Route::get('/tender-participation', [UserDashboardController::class, 'tenderParticipation'])->name('tender-participation');
-        });
-    }
-);
+Route::
+        namespace('App\Http\Controllers')->group(
+        function () {
+            Route::group(['as' => 'user.', 'prefix' => 'user', 'namespace' => 'User', 'middleware' => ['auth', 'user']], function () {
+                Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
+                Route::get('/user-mangement', [UserDashboardController::class, 'userMangement'])->name('user-mangement');
+                Route::get('/tender-participation', [UserDashboardController::class, 'tenderParticipation'])->name('tender-participation');
+                Route::get('/tender-participation/{id}', [UserDashboardController::class, 'tenderParticipationShow'])->name('tender-participation.show');
+            });
+        }
+    );
 // ================================user AND ROUTE END=============

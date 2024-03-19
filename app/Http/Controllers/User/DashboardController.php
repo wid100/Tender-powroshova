@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Tender;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -22,9 +23,14 @@ class DashboardController extends Controller
     }
     public function tenderParticipation()
     {
-        return view('user.tender-participation.index');
+        $tenders=Tender::get();
+        return view('user.tender-participation.index', compact('tenders'));
     }
-
+    public function tenderParticipationShow($id)
+    {
+        $tender = Tender::find($id);
+        return view('user.tender-participation.show', compact('tender'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -52,10 +58,7 @@ class DashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+ 
 
     /**
      * Show the form for editing the specified resource.

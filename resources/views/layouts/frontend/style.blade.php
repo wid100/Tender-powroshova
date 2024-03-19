@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="{{asset('assets-frontend/font/icofont.min.css')}}" />
     <!-- ==================Bootstrap============ -->
     <link rel="stylesheet" href="{{asset('assets-frontend/css/bootstrap.min.css')}}" />
+    <!-- endinject -->
+<link rel="stylesheet" href="{{ asset('assets/vendors/datatables.net-bs5/dataTables.bootstrap5.css') }}">
     <!-- ================default=============== -->
     <link rel="stylesheet" href="{{asset('assets-frontend/css/default.css')}}" />
     <!-- =================style============ -->
