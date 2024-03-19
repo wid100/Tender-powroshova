@@ -13,23 +13,23 @@
         <ul class="nav">
             <li class="nav-item nav-category">Main</li>
             <li class="nav-item">
-                <a href="dashboard.html" class="nav-link">
+                <a href="{{ route('admin.dashboard') }}" class="nav-link">
                     <i class="link-icon" data-feather="box"></i>
                     <span class="link-title">Dashboard</span>
                 </a>
             </li>
             <li class="nav-item nav-category">web apps</li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" href="#emails" role="button" aria-expanded="false"
-                    aria-controls="emails">
-                    <i class="link-icon" data-feather="mail"></i>
-                    <span class="link-title">Email</span>
+                <a class="nav-link" data-bs-toggle="collapse" href="#tender" role="button" aria-expanded="false"
+                    aria-controls="tender">
+                    <i class="link-icon" data-feather="tender"></i>
+                    <span class="link-title">Tenders</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
-                <div class="collapse" id="emails">
+                <div class="collapse" id="tender">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
-                            <a href="pages/email/inbox.html" class="nav-link">Inbox</a>
+                            <a href="{{ route('admin.tender.index') }}" class="nav-link">Tender</a>
                         </li>
                         <li class="nav-item">
                             <a href="pages/email/read.html" class="nav-link">Read</a>
