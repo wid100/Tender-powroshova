@@ -146,7 +146,7 @@
                                     RFQ for Printer (Specifications Attached)
                                   </p>
                                   <div class="counting-part">
-                                    <span>5Days: 23Hrs: 2Mins</span>
+                                    <span id="countdown">Calculating time...</span>
                                   </div>
 
                                   <div class="row">
