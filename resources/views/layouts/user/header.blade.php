@@ -4,7 +4,7 @@
             <div class="navbar-content">
                 <div class="navbar-leftside">
                     <div class="nav-logo">
-                        <a href="index.html">
+                        <a href="/">
                             <img src="{{ asset('assets-frontend/home-image/logo-group.png') }}" alt="Ramgong_eTender">
                         </a>
                     </div>

@@ -13,7 +13,7 @@
                   <div class="col-md-3">
                     <div class="sd-box">
                       <div class="sd-box-icons">
-                        <img src="/assets/sd-images/Frame.png" alt="" />
+                        <img src="{{asset('assets-frontend/sd-images/Frame.png')}}" alt="" />
                       </div>
                       <div class="sd-box-text">
                         <p>LIVE TENDER</p>
@@ -27,7 +27,7 @@
                   <div class="col-md-3">
                     <div class="sd-box">
                       <div class="sd-box-icons">
-                        <img src="/assets/sd-images/Frame(1).png" alt="" />
+                        <img src="{{asset('assets-frontend/sd-images/Frame(1).png')}}" alt="" />
                       </div>
                       <div class="sd-box-text">
                         <p>CLOSING TODAY</p>
@@ -42,7 +42,7 @@
                     <div class="sd-box">
                       <div class="sd-box-icons">
                         <img
-                          src="/assets/sd-images/clarity_new-solid.png"
+                          src="{{asset('assets-frontend/sd-images/clarity_new-solid.png')}}"
                           alt=""
                         />
                       </div>
@@ -59,7 +59,7 @@
                     <div class="sd-box">
                       <div class="sd-box-icons">
                         <img
-                          src="/assets/sd-images/material-symbols-light_award-star-outline-rounded.png"
+                          src="{{asset('assets-frontend/sd-images/material-symbols-light_award-star-outline-rounded.png')}}"
                           alt=""
                         />
                       </div>
@@ -124,13 +124,13 @@
                             <div class="d-flex align-items-center gap-2">
                               <div class="button-prev">
                                 <img
-                                  src="/assets/home-image/left-arrow.svg"
+                                  src="{{asset('assets-frontend/home-image/left-arrow.svg')}}"
                                   alt=""
                                 />
                               </div>
                               <div class="button-next">
                                 <img
-                                  src="/assets/home-image/right-arrow.svg"
+                                  src="{{asset('assets-frontend/home-image/right-arrow.svg')}}"
                                   alt=""
                                 />
                               </div>
@@ -315,13 +315,13 @@
                             <div class="d-flex align-items-center gap-2">
                               <div class="button-prev">
                                 <img
-                                  src="/assets/home-image/left-arrow.svg"
+                                  src="{{asset('assets-frontend/home-image/left-arrow.svg')}}"
                                   alt=""
                                 />
                               </div>
                               <div class="button-next">
                                 <img
-                                  src="/assets/home-image/right-arrow.svg"
+                                  src="{{asset('assets-frontend/home-image/right-arrow.svg')}}"
                                   alt=""
                                 />
                               </div>

@@ -1,6 +1,6 @@
 @font-face {
   font-family: Arial;
-  src: url(/assets/font/fonts/arial.ttf);
+  src: url('/public/assets-frontend/font/fonts/arial.ttf');
 }
 * {
   padding: 0;

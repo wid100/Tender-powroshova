@@ -23,7 +23,7 @@
                   </div>
                   <div href="#" class="dashboard-profile-user">
                       <div class="d-flex align-items-center gap-3">
-                        <img class="user-img" src="/assets/images/icons/wid.svg" alt="" />
+                        <img class="user-img" src=" {{asset('assets-frontend/images/icons/wid.svg')}}" alt="" />
                       <p>WOMEN IN DIGITAL</p>
                       <img src="{{ asset('assets-frontend/images/icons/arrow.svg') }}" alt="" />
                       </div>
