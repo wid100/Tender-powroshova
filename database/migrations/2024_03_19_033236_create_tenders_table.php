@@ -16,8 +16,14 @@ return new class extends Migration
         Schema::create('tenders', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
-
+            $table->string('tender_id')->uniqid();
+            $table->string('user_id');
+            $table->text('description')->nullable();
+            $table->text('contact_details')->nullable();
+            $table->string('start_date');
+            $table->string('end_date');
+            $table->string('method')->nullable();
+            $table->boolean('status')->default(false);
             $table->timestamps();
         });
     }

@@ -22,7 +22,7 @@
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#tender" role="button" aria-expanded="false"
                     aria-controls="tender">
-                    <i class="link-icon" data-feather="tender"></i>
+                    <i class="link-icon" data-feather="box"></i>
                     <span class="link-title">Tenders</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>

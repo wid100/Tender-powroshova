@@ -27,8 +27,6 @@
 
   <script src="{{ asset('assets/js/select2.js') }}"></script>
 
-
-
   <script>
       function deleteId(id) {
           const swalWithBootstrapButtons = Swal.mixin({
