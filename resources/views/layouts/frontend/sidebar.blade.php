@@ -26,7 +26,7 @@
                                         fill="#7D7D7D" />
                                 </svg>
 
-                                <span key="t-dashboards">Tender Participation</span>
+                                <span key="t-dashboards">Tender List</span>
                             </a>
                         </li>
                         <li class="sidebar-link">

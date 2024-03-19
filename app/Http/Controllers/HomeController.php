@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tender;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -20,6 +21,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        $tenders = Tender::get();
+        return view('welcome', compact('tenders'));
     }
 }

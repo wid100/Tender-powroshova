@@ -15,7 +15,9 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('user.dashboard');
+        $tenders = Tender::get();
+        $tenderCount = Tender::count();
+        return view('user.dashboard',compact('tenders','tenderCount'));
     }
     public function userMangement()
     {
