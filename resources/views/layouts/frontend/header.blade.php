@@ -25,12 +25,14 @@
                       <div class="d-flex align-items-center gap-3">
                           <img class="user-img" src=" {{ asset('assets-frontend/images/icons/wid.svg') }}"
                               alt="" />
-                          <p>WOMEN IN DIGITAL</p>
+                          <p>{{ Auth::user()->name }}</p>
                           <img src="{{ asset('assets-frontend/images/icons/arrow.svg') }}" alt="" />
                       </div>
                       <div class="user-logout-btn">
                           <a href="{{ route('user.change-password') }}">Change Password</a>
-                          <a href="{{ route('logout') }}">Logout</a>
+                          <a href="{{ route('logout') }}"
+                              onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Logout</a>
                       </div>
 
                   </div>

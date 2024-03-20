@@ -34,6 +34,7 @@ return new class extends Migration
 
             $table->json('bin_info')->nullable();
             $table->json('contact')->nullable();
+            $table->json('company_info')->nullable();
             $table->json('bank_info')->nullable();
             $table->json('document_a')->nullable();
             $table->json('document_b')->nullable();

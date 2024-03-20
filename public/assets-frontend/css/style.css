@@ -44,7 +44,7 @@
     text-decoration: none;
     border: 1px solid var(--white-color);
     padding: 6px 20px;
-    border-radius: 40px;
+    border-radius: 5px;
     transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
@@ -73,37 +73,37 @@ section.hero-section {
     height: 100%;
 }
 .hero-content ul li {
-    margin-bottom: 35px;
-    margin-right: 40px;
+    margin-bottom: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    margin-right: 20px;
   }
   .hero-custom-btn {
     display: flex;
     width: 100%;
-    padding: 10px 64px;
-    border-radius: 40px;
+    padding: 10px 20px;
+    border-radius: 7px;
     font-size: 20px;
     font-weight: var(--font-semi-bold);
     text-transform: uppercase;
     color: var(--white-color);
-    background: var(--ash-color);
+    background: #004382;
     transition: .3s;
-    border: 2px solid var(--ash-color);
+    /* border: 2px solid var(--ash-color); */
     text-decoration: none;
     text-align: center;
     justify-content: start;
     line-height: 150%;
     align-items: center;
     gap: 30px;
+    justify-content: center;
   }
-  
+
   .hero-custom-btn:hover {
-    color: var(--white-color); 
+    color: var(--white-color);
   }
-  
+
   .hero-custom-btn img {
     width: 50px;
   }
@@ -197,18 +197,18 @@ section.hero-section {
 
   @media screen and (max-width:768px) {
     .navbar-rightside ul li {
-        
+
         margin-left: 5px;
-        
+
     }
     .hero-content ul li {
         margin-right: 0;
-        
+
       }
       .featured-tenders-header h3{
         margin:10px 0;
         font-size: 20px;
-        
+
     }
     .featured-tenders-section{
         margin: 10px 0;
@@ -221,7 +221,7 @@ section.hero-section {
     .swiper-content-featured-tenders p{
         font-size: 14px;
         margin-bottom: 10px;
-        
+
     }
     .counting-part span{
         padding: 10px 20px;
@@ -229,7 +229,7 @@ section.hero-section {
     .swiper-content-featured-tenders a {
         font-size: 12px;
     }
-    
+
   }
   @media screen and (max-width:425px) {
     .navbar-rightside ul li {
@@ -241,6 +241,5 @@ section.hero-section {
     .view-more{
         font-size: 14px;
     }
-    
+
   }
- 

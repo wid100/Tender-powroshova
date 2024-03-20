@@ -23,27 +23,38 @@ Auth::routes();
 
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::
-        namespace('App\Http\Controllers')->group(function () {
-            Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {
-                Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+Route::namespace('App\Http\Controllers')->group(function () {
+    Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {
+        Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
-                Route::resource('tender', 'TenderController');
-            });
-        });
+        Route::resource('tender', 'TenderController');
+    });
+});
 
 // ================================user AND ROUTE=============
-Route::
-        namespace('App\Http\Controllers')->group(
-        function () {
-            Route::group(['as' => 'user.', 'prefix' => 'user', 'namespace' => 'User', 'middleware' => ['auth', 'user']], function () {
-                Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
-                Route::get('/user-mangement', [UserDashboardController::class, 'userMangement'])->name('user-mangement');
-                Route::get('/live-tender', [UserDashboardController::class, 'liveTender'])->name('live-tender');
-                Route::get('/live-tender/{id}', [UserDashboardController::class, 'liveTenderId'])->name('live-tender.show');
-                Route::get('/participate-tender', [UserDashboardController::class, 'ParticipateTender'])->name('participate-tender');
-                Route::get('/change-password', [UserDashboardController::class, 'changePassword'])->name('change-password');
-            });
-        }
-    );
+Route::namespace('App\Http\Controllers')->group(
+    function () {
+        Route::group(['as' => 'user.', 'prefix' => 'user', 'namespace' => 'User', 'middleware' => ['auth', 'user']], function () {
+            Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
+            Route::get('/user-mangement', [UserDashboardController::class, 'userMangement'])->name('user-mangement');
+            Route::get('/live-tender', [UserDashboardController::class, 'liveTender'])->name('live-tender');
+            Route::get('/live-tender/{id}', [UserDashboardController::class, 'liveTenderId'])->name('live-tender.show');
+            Route::get('/participate-tender', [UserDashboardController::class, 'ParticipateTender'])->name('participate-tender');
+            Route::get('/change-password', [UserDashboardController::class, 'changePassword'])->name('change-password');
+
+            Route::resource('supplier', 'SupplierController');
+        });
+    }
+);
 // ================================user AND ROUTE END=============
+
+
+
+// Route::namespace('App\Http\Controllers')->group(
+//     function () {
+//         Route::group(['as' => 'user.', 'prefix' => 'user', 'namespace' => 'User', 'middleware' => ['auth', 'user']], function () {
+//             Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
+//             Route::resource('supplier', 'SupplierController');
+//         });
+//     }
+// );

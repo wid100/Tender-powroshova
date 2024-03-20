@@ -13,7 +13,7 @@
                 </div>
                 <div class="hero-content">
                     <div class="row align-items-center">
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <ul>
                                 <li>
                                     <a href="{{ route('user.live-tender') }}" class="hero-custom-btn">
