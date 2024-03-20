@@ -17,21 +17,29 @@ class DashboardController extends Controller
     {
         $tenders = Tender::get();
         $tenderCount = Tender::count();
-        return view('user.dashboard',compact('tenders','tenderCount'));
+        return view('user.dashboard', compact('tenders', 'tenderCount'));
     }
     public function userMangement()
     {
         return view('user.user-mangement.index');
     }
-    public function tenderParticipation()
+    public function liveTender()
     {
-        $tenders=Tender::get();
-        return view('user.tender-participation.index', compact('tenders'));
+        $tenders = Tender::get();
+        return view('user.live-tender.index', compact('tenders'));
     }
-    public function tenderParticipationShow($id)
+    public function liveTenderId($id)
     {
         $tender = Tender::find($id);
-        return view('user.tender-participation.show', compact('tender'));
+        return view('user.live-tender.show', compact('tender'));
+    }
+    public function ParticipateTender()
+    {
+        return view('user.participate-tender.index');
+    }
+    public function changePassword()
+    {
+        return view('user.change-password.index');
     }
     /**
      * Show the form for creating a new resource.
@@ -60,7 +68,7 @@ class DashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
- 
+
 
     /**
      * Show the form for editing the specified resource.

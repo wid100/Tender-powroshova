@@ -11,7 +11,7 @@
                    <div class="row">
                        <!-- LIVE TENDER -->
                        <div class="col-md-3">
-                           <div class="sd-box">
+                           <a href="{{ route('user.live-tender') }}" class="sd-box">
                                <div class="sd-box-icons">
                                    <img src="{{ asset('assets-frontend/sd-images/Frame.png') }}" alt="" />
                                </div>
@@ -21,7 +21,7 @@
                                <div class="sd-box-values">
                                    <p>{{ $tenderCount }}</p>
                                </div>
-                           </div>
+                           </a>
                        </div>
                        <!-- CLOSING TODAY -->
                        <div class="col-md-3">
@@ -159,7 +159,7 @@
                                                                    </div>
                                                                </div>
                                                                <a
-                                                                   href="{{ route('user.tender-participation.show', ['id' => $tender->id]) }}">read
+                                                                   href="{{ route('user.live-tender.show', ['id' => $tender->id]) }}">read
                                                                    more</a>
                                                            </div>
                                                        </div>

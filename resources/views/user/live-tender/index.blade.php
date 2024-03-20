@@ -24,8 +24,8 @@
                                @endphp
 
                                @if ($endDate->isFuture())
-                                   <tr class="clickable-row" {{-- onclick="window.location='/user/tender-participation/{{ $tender->id }}';"> --}}
-                                       onclick="window.location='{{ route('user.tender-participation.show', ['id' => $tender->id]) }}';">
+                                   <tr class="clickable-row" {{-- onclick="window.location='/user/live-tender/{{ $tender->id }}';"> --}}
+                                       onclick="window.location='{{ route('user.live-tender.show', ['id' => $tender->id]) }}';">
                                        <td>{{ $tender->tender_id }}</td>
                                        <td>{{ $tender->name }}</td>
                                        <td>{{ $tender->start_date }}</td>

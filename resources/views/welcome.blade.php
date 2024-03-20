@@ -16,7 +16,7 @@
                         <div class="col-md-5">
                             <ul>
                                 <li>
-                                    <a href="{{ route('user.tender-participation') }}" class="hero-custom-btn">
+                                    <a href="{{ route('user.live-tender') }}" class="hero-custom-btn">
                                         <div class="live-logo-img">
                                             <img src="{{ asset('assets-frontend/home-image/live-tender.png') }}"
                                                 alt="LIVE TENDER">
@@ -156,8 +156,7 @@
                                                         <p>{{ $tender->end_date }}</p>
                                                     </div>
                                                 </div>
-                                                <a
-                                                    href="{{ route('user.tender-participation.show', ['id' => $tender->id]) }}">read
+                                                <a href="{{ route('user.live-tender.show', ['id' => $tender->id]) }}">read
                                                     more</a>
                                             </div>
                                         </div>

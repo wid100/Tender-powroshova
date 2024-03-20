@@ -57,9 +57,9 @@
                         </div> --}}
                     </div>
                 </div>
-                <button class="tender-appy-btn custom-btn mt-3">
+                <a href="{{route('user.participate-tender')}}" class="tender-appy-btn custom-btn mt-3">
                     Apply Online
-                </button>
+                </a>
             </div>
         </div>
     </div>

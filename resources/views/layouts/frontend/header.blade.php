@@ -29,8 +29,8 @@
                           <img src="{{ asset('assets-frontend/images/icons/arrow.svg') }}" alt="" />
                       </div>
                       <div class="user-logout-btn">
-                          <a href="{{ route('logout') }}"onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">Logout</a>
+                          <a href="{{ route('user.change-password') }}">Change Password</a>
+                          <a href="{{ route('logout') }}">Logout</a>
                       </div>
 
                   </div>

@@ -61,7 +61,7 @@
     /* text-align: center; */
 }
 .user-logout-btn a{
-  color: var(--black-color);
+  color: var(--main-color);
 }
 .dashboard-profile-user:hover .user-logout-btn {
     opacity: 1;

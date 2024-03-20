@@ -39,8 +39,10 @@ Route::
             Route::group(['as' => 'user.', 'prefix' => 'user', 'namespace' => 'User', 'middleware' => ['auth', 'user']], function () {
                 Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
                 Route::get('/user-mangement', [UserDashboardController::class, 'userMangement'])->name('user-mangement');
-                Route::get('/tender-participation', [UserDashboardController::class, 'tenderParticipation'])->name('tender-participation');
-                Route::get('/tender-participation/{id}', [UserDashboardController::class, 'tenderParticipationShow'])->name('tender-participation.show');
+                Route::get('/live-tender', [UserDashboardController::class, 'liveTender'])->name('live-tender');
+                Route::get('/live-tender/{id}', [UserDashboardController::class, 'liveTenderId'])->name('live-tender.show');
+                Route::get('/participate-tender', [UserDashboardController::class, 'ParticipateTender'])->name('participate-tender');
+                Route::get('/change-password', [UserDashboardController::class, 'changePassword'])->name('change-password');
             });
         }
     );
