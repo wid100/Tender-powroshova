@@ -1,17 +1,8 @@
-document.querySelector(".header-menu").addEventListener("click", function () {
-  document.querySelector(".sidebar").classList.add("active");
-});
 
-document
-  .querySelector(".sidebar-close-menu")
-  .addEventListener("click", function () {
-    document.querySelector(".sidebar").classList.remove("active");
-  });
 
   
  const header = document.getElementById("page-topbar");
 
- // Function to add a 'sticky' class to the header when user scrolls down, and remove it when scrolls back up
  function handleScroll() {
    if (window.scrollY > header.offsetTop) {
      header.classList.add("sticky-header");
@@ -19,26 +10,25 @@ document
      header.classList.remove("sticky-header");
    }
  }
-  
 
-
- // Listen for the scroll event and call handleScroll function
  window.addEventListener("scroll", handleScroll);
 
+
+ 
  const header2 = document.getElementById("home-topbar");
 
- // Function to add a 'sticky' class to the header when user scrolls down, and remove it when scrolls back up
  function handleScroll2() {
-   console.log("Scrolling detected"); // Check if this log appears in the console
+   console.log("Scrolling detected"); 
    if (window.scrollY > header.offsetTop) {
      header.classList.add("sticky-header");
    } else {
      header.classList.remove("sticky-header");
    }
  }
-
- // Listen for the scroll event and call handleScroll function
  window.addEventListener("scroll", handleScroll2);
+
+
+
 
 // Get the table
 var table = document.querySelector(".table");
@@ -134,3 +124,45 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+
+// Form row added
+
+     function addRow() {
+         var table = document
+             .getElementById("myTable")
+             .getElementsByTagName("tbody")[0];
+         var newRow = table.insertRow(table.rows.length); // Insert new row at the end of the table
+         var requirementCell = newRow.insertCell(0); // Insert cells for each column
+         var complyCell = newRow.insertCell(1);
+         var commentsCell = newRow.insertCell(2);
+         var uploadCell = newRow.insertCell(3);
+
+         // Fill cells with content
+         requirementCell.innerHTML = "Requirement content";
+         complyCell.innerHTML = `
+      <ul class="participate-checkbox">
+        <li>
+          <input type="radio" id="yes" />
+          <label for="yes">Yes</label>
+        </li>
+        <li>
+          <input type="radio" id="no" />
+          <label for="no">No</label>
+        </li>
+        <li>
+          <input type="radio" id="other" />
+          <label for="other">Others</label>
+        </li>
+      </ul>`;
+         commentsCell.innerHTML = `<input class="form-control-item" type="text" placeholder="Enter comments (Max 250 characters)" />`;
+         uploadCell.innerHTML = `
+      <div class="upload-img custom-btn">
+        <input type="file" />
+        <img src="/assets/images/icons/upload.svg" alt="" />
+      </div>`;
+     }
+
+
+     
