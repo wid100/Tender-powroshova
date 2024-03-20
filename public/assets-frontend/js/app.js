@@ -116,3 +116,19 @@ function toggleConfirmPasswordVisibility() {
     toggleConfirmPassword.style.backgroundImage = "url('assets/img/eye-close.png')";
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const saveNextButtons = document.querySelectorAll(".custom-btn");
+
+    saveNextButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const currentTab = this.parentElement;
+            const nextTab = currentTab.nextElementSibling;
+
+            if (nextTab) {
+                const nextTabLink = nextTab.querySelector(".tender-tab");
+                nextTabLink.click();
+            }
+        });
+    });
+}); 
