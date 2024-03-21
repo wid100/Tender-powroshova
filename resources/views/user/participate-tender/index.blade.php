@@ -53,104 +53,355 @@
                                                    value="RFQ for Camera and SD Memory Card. [BPD/2024/RFQ-617]" required />
                                            </div>
                                        </div>
-
+                                       <div class="col-md-6">
+                                           <div class="form-input-item">
+                                               <label class="tender-form-header" for="validationCustom01">০১।মহালের নাম
+                                               </label>
+                                               <input type="text" class="form-control" id="validationCustom01"
+                                                   value="" name="name" placeholder="মহালের নাম" />
+                                           </div>
+                                       </div>
+                                       <div class="col-md-6">
+                                           <div class="form-input-item">
+                                               <label class="tender-form-header" for="validationCustom01">অবস্থান</label>
+                                               <input type="text" class="form-control" id="validationCustom01"
+                                                   value="" name="place" required placeholder="অবস্থান" />
+                                           </div>
+                                       </div>
                                        <div class="col-md-12">
                                            <div class="form-input-item">
-                                               <label class="tender-form-header" for="validationCustom01">Tender Payment
-                                                   Details</label>
+                                               <p class="tender-form-header">০২। ১৪৩১ বাংলা সনের দরপত্র দাতা কর্তৃক ইজারা
+                                                   প্রদর </p>
+                                               <div class="row">
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="validationCustom01">অংকে
+                                                       </label>
+                                                       <input type="text" class="form-control" id="validationCustom01"
+                                                           value="" required placeholder="অংকে" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="validationCustom01">কথায়
+                                                       </label>
+                                                       <input type="text" class="form-control" id="validationCustom01"
+                                                           value="" required placeholder="কথায়" />
+                                                   </div>
+                                               </div>
+
+                                           </div>
+                                       </div>
+                                       <div class="col-md-12">
+                                           <div class="form-input-item">
+                                               <p class="tender-form-header">০৩। বায়নার টাকার বিবরন</p>
+                                               <div class="row">
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="validationCustom01">ব্যাংকের
+                                                           নাম </label>
+                                                       <input type="text" class="form-control" id="validationCustom01"
+                                                           value="" required placeholder="ব্যাংকের নাম" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="validationCustom01">ড্রাপট
+                                                           নং </label>
+                                                       <input type="text" class="form-control" id="validationCustom01"
+                                                           value="" required placeholder="ড্রাপট নং" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="validationCustom01">তারিখ
+                                                       </label>
+                                                       <input type="date" class="form-control" id="validationCustom01"
+                                                           value="" required name="" placeholder="তারিখ" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="validationCustom01">টাকার
+                                                           পরিমান </label>
+                                                       <input type="text" class="form-control" id="validationCustom01"
+                                                           value="" required name=""
+                                                           placeholder="টাকার পরিমান" />
+                                                   </div>
+                                               </div>
+
+                                           </div>
+                                       </div>
+                                       <div class="col-md-12">
+                                           <div class="form-input-item">
+                                               <p class="tender-form-header">০৪। উৎস কর ও মূল্য সংযোজন কর বাধন ইজারা
+                                                   মূল্যের ১০% ও ১৫%, মোট=২৫% (শতকরা পঁচিশ ভাগ)</p>
+                                               <div class="row">
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="validationCustom01">ব্যাংকের
+                                                           নাম </label>
+                                                       <input type="text" class="form-control" id="validationCustom01"
+                                                           value="" required placeholder="ব্যাংকের নাম" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="validationCustom01">ড্রাপট
+                                                           নং </label>
+                                                       <input type="text" class="form-control" id="validationCustom01"
+                                                           value="" required placeholder="ড্রাপট নং" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="validationCustom01">তারিখ
+                                                       </label>
+                                                       <input type="date" class="form-control" id="validationCustom01"
+                                                           value="" required name="" placeholder="তারিখ" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="validationCustom01">টাকার
+                                                           পরিমান </label>
+                                                       <input type="text" class="form-control" id="validationCustom01"
+                                                           value="" required name=""
+                                                           placeholder="টাকার পরিমান" />
+                                                   </div>
+                                               </div>
+
+                                           </div>
+                                       </div>
+                                       <div class="col-md-12">
+                                           <div class="form-input-item">
+                                               <p class="tender-form-header">০৫। বায়নার উপর ৫% (শতকরা পাঁচ ভাগ) ফেরত যোগ্য
+                                               </p>
+
                                                <div class="table-responsive">
                                                    <table class="table participate-tender-table table-hover">
                                                        <thead class="tender-table-header">
                                                            <tr>
-                                                               <th scope="col">Tender Id</th>
-                                                               <th scope="col">Payment Type</th>
-                                                               <th scope="col">Required Amount (BDT)</th>
-                                                               <th scope="col">Paid Amount (BDT)</th>
-                                                               <th scope="col">Payment Date</th>
-                                                               <th scope="col">Status</th>
+                                                               <th scope="col">ব্যাংকের
+                                                                   নাম</th>
+                                                               <th scope="col">সিডিআর / ড্রাপট নং</th>
+                                                               <th scope="col">টাকা</th>
+
                                                            </tr>
                                                        </thead>
                                                        <tbody class="tender-table-body">
                                                            <tr>
-                                                               <td>01</td>
-                                                               <td>Bkash</td>
-                                                               <td>1020.00</td>
-                                                               <td>1020.00</td>
+                                                               <td>
+                                                                   <div class="form-input-field">
+                                                                       <input type="text" name="">
+                                                                   </div>
+                                                               </td>
+                                                               <td>
+                                                                   <div class="form-input-field">
+                                                                       <input type="text" name="">
+                                                                   </div>
+                                                               </td>
+                                                               <td>
+                                                                   <div class="form-input-field">
+                                                                       <input type="text" name="">
+                                                                   </div>
+                                                               </td>
 
-                                                               <td>15/03/2024</td>
-
-                                                               <td>Paid</td>
                                                            </tr>
                                                        </tbody>
                                                    </table>
                                                </div>
                                            </div>
                                        </div>
+                                       <div class="col-md-12">
+                                           <div class="form-input-item">
+                                               <p class="tender-form-header">০৬। সিডিউল মূল্য (অফেরতযোগ্য)
+                                               </p>
 
-                                       <div class="col-md-6">
-                                           <div class="form-input-item">
-                                               <label class="tender-form-header" for="validationCustom01">Payment
-                                                   Type:*</label>
-                                               <input type="text" class="form-control" id="validationCustom01"
-                                                   placeholder="Payment Type" value="" required />
-                                           </div>
-                                       </div>
-                                       <div class="col-md-6">
-                                           <div class="form-input-item">
-                                               <label class="tender-form-header" for="validationCustom01">Required Amount
-                                                   (BDT):*</label>
-                                               <input type="text" class="form-control" id="validationCustom01"
-                                                   placeholder="Required Amount" value="" required />
-                                           </div>
-                                       </div>
+                                               <div class="table-responsive">
+                                                   <table class="table participate-tender-table table-hover">
+                                                       <thead class="tender-table-header">
+                                                           <tr>
+                                                               <th scope="col">ব্যাংকের
+                                                                   নাম</th>
+                                                               <th scope="col">সিডিআর / ড্রাপট নং</th>
+                                                               <th scope="col">টাকা</th>
 
-                                       <div class="col-md-6">
-                                           <div class="form-input-item">
-                                               <label class="tender-form-header" for="validationCustom01">Transaction
-                                                   Type:*</label>
-                                               <input type="text" class="form-control" id="validationCustom01"
-                                                   placeholder="Transaction Type" value="" required />
-                                           </div>
-                                       </div>
-                                       <div class="col-md-6">
-                                           <div class="form-input-item">
-                                               <label class="tender-form-header" for="validationCustom01">Amount
-                                                   (BDT):*</label>
-                                               <input type="text" class="form-control" id="validationCustom01"
-                                                   placeholder="Amount" value="" required />
-                                           </div>
-                                       </div>
+                                                           </tr>
+                                                       </thead>
+                                                       <tbody class="tender-table-body">
+                                                           <tr>
+                                                               <td>
+                                                                   <div class="form-input-field">
+                                                                       <input type="text" name="">
+                                                                   </div>
+                                                               </td>
+                                                               <td>
+                                                                   <div class="form-input-field">
+                                                                       <input type="text" name="">
+                                                                   </div>
+                                                               </td>
+                                                               <td>
+                                                                   <div class="form-input-field">
+                                                                       <input type="text" name="">
+                                                                   </div>
+                                                               </td>
 
-                                       <div class="col-md-6">
-                                           <div class="form-input-item">
-                                               <label class="tender-form-header" for="validationCustom01">Document
-                                                   Name</label>
-                                               <div class="d-flex align-items-center gap-2">
-                                                   <input type="text" class="form-control" />
-                                                   <div class="upload-img custom-btn">
-                                                       <input type="file" />
-                                                       <img src="{{ asset('assets-frontend/images/icons/upload.svg') }}"
-                                                           alt="" />
-                                                   </div>
+                                                           </tr>
+                                                       </tbody>
+                                                   </table>
                                                </div>
                                            </div>
                                        </div>
                                        <div class="col-md-6">
                                            <div class="form-input-item">
-                                               <label class="tender-form-header" for="validationCustom01">Remarks:</label>
-                                               <input type="text" class="form-control" id="validationCustom01"
-                                                   placeholder="Remarks" value="" required />
+                                               <label class="tender-form-header" for="dor_data_name">০৭। দর দাতার নাম
+                                                   :</label>
+                                               <input type="text" class="form-control" id="dor_data_name"
+                                                   value="" name="" placeholder="দর দাতার নাম" />
+                                           </div>
+                                       </div>
+                                       <div class="col-md-6">
+                                           <div class="form-input-item">
+                                               <label class="tender-form-header" for="mobile">মোবাইল নং-</label>
+                                               <input type="number" class="form-control" id="mobile" value=""
+                                                   name="mobile" placeholder="মোবাইল নং" />
+                                           </div>
+                                       </div>
+                                       <div class="col-md-6">
+                                           <div class="form-input-item">
+                                               <label class="tender-form-header" for="father_name">০৮। পিতার নাম </label>
+                                               <input type="text" class="form-control" id="father_name"
+                                                   value="" name="father_name" placeholder="পিতার নাম" />
+                                           </div>
+                                       </div>
+                                       <div class="col-md-6">
+                                           <div class="form-input-item">
+                                               <label class="tender-form-header" for="mother_name">০৯। মাতার নাম </label>
+                                               <input type="text" class="form-control" id="mother_name"
+                                                   value="" name="mother_name" placeholder="মাতার নাম" />
+                                           </div>
+                                       </div>
+                                       <div class="col-md-12">
+                                           <div class="form-input-item">
+                                               <p class="tender-form-header">১০। (ক) বর্তমান ঠিকানা </p>
+                                               <div class="row">
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="village">গ্রাম</label>
+                                                       <input type="text" class="form-control" id="village" required
+                                                           name="village" placeholder="গ্রাম" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="post_office">ডাকঘর </label>
+                                                       <input type="text" class="form-control" id="post_office"
+                                                           value="" name="post_office" required
+                                                           placeholder="ডাকঘর" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="upozila">উপজেলা </label>
+                                                       <input type="text" class="form-control" id="upozila"
+                                                           value="" name="upozila" required
+                                                           placeholder="উপজেলা " />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="district">জেলা </label>
+                                                       <input type="text" class="form-control" id="district"
+                                                           value="" name="district" required placeholder="জেলা " />
+                                                   </div>
+                                               </div>
+
+                                           </div>
+                                       </div>
+                                       <div class="col-md-12">
+                                           <div class="form-input-item">
+                                               <p class="tender-form-header">(খ) স্থায়ী ঠিকানা </p>
+                                               <div class="row">
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="village">গ্রাম</label>
+                                                       <input type="text" class="form-control" id="village" required
+                                                           name="village" placeholder="গ্রাম" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="post_office">ডাকঘর </label>
+                                                       <input type="text" class="form-control" id="post_office"
+                                                           value="" name="post_office" required
+                                                           placeholder="ডাকঘর" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="upozila">উপজেলা </label>
+                                                       <input type="text" class="form-control" id="upozila"
+                                                           value="" name="upozila" required
+                                                           placeholder="উপজেলা " />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="district">জেলা </label>
+                                                       <input type="text" class="form-control" id="district"
+                                                           value="" name="district" required placeholder="জেলা " />
+                                                   </div>
+                                               </div>
+
                                            </div>
                                        </div>
 
-                                       <div class="col-md-6">
+                                       <div class="col-md-12">
                                            <div class="form-input-item">
-                                               <label class="tender-form-header" for="validationCustom01">Payment
-                                                   Date *</label>
-                                               <input class="form-control" type="date" name=""
-                                                   id="" />
+                                               <p class="tender-form-header">১১। স্বাক্ষীর নাম (১)</p>
+                                               <div class="row">
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="witness_father_name1">পিতার
+                                                           নাম </label>
+                                                       <input type="text" class="form-control"
+                                                           id="witness_father_name1" required name="witness_father_name1"
+                                                           placeholder="পিতার নাম" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="village">গ্রাম</label>
+                                                       <input type="text" class="form-control" id="village" required
+                                                           name="village" placeholder="গ্রাম" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="post_office">ডাকঘর </label>
+                                                       <input type="text" class="form-control" id="post_office"
+                                                           value="" name="post_office" required
+                                                           placeholder="ডাকঘর" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="upozila">উপজেলা </label>
+                                                       <input type="text" class="form-control" id="upozila"
+                                                           value="" name="upozila" required
+                                                           placeholder="উপজেলা " />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="district">জেলা </label>
+                                                       <input type="text" class="form-control" id="district"
+                                                           value="" name="district" required placeholder="জেলা " />
+                                                   </div>
+                                               </div>
+
                                            </div>
                                        </div>
+                                       <div class="col-md-12">
+                                           <div class="form-input-item">
+                                               <p class="tender-form-header">স্বাক্ষীর নাম (2)</p>
+                                               <div class="row">
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="witness_father_name2">পিতার
+                                                           নাম </label>
+                                                       <input type="text" class="form-control"
+                                                           id="witness_father_name2" required name="witness_father_name2"
+                                                           placeholder="পিতার নাম" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="village">গ্রাম</label>
+                                                       <input type="text" class="form-control" id="village" required
+                                                           name="village" placeholder="গ্রাম" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="post_office">ডাকঘর </label>
+                                                       <input type="text" class="form-control" id="post_office"
+                                                           value="" name="post_office" required
+                                                           placeholder="ডাকঘর" />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="upozila">উপজেলা </label>
+                                                       <input type="text" class="form-control" id="upozila"
+                                                           value="" name="upozila" required
+                                                           placeholder="উপজেলা " />
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="district">জেলা </label>
+                                                       <input type="text" class="form-control" id="district"
+                                                           value="" name="district" required placeholder="জেলা " />
+                                                   </div>
+                                               </div>
+
+                                           </div>
+                                       </div>
+
+
                                    </div>
                                    <button class="custom-btn" type="submit">Add</button>
                                </form>
@@ -175,81 +426,71 @@
                                                </tr>
                                            </thead>
                                            <tbody class="tender-table-body">
-                                               <!-- <tr>
-                                    <td>Product Catalogue</td>
-                                    <td>
-                                      <ul class="participate-checkbox">
-                                        <li>
-                                          <input type="radio" id="yes" />
-                                          <label for="yes">Yes</label>
-                                        </li>
-                                        <li>
-                                          <input type="radio" id="no" />
-                                          <label for="no">No</label>
-                                        </li>
-                                        <li>
-                                          <input type="radio" id="other" />
-                                          <label for="other">Others</label>
-                                        </li>
-                                      </ul>
-                                    </td>
-                                    <td>
-                                      <input
-                                        class="form-control-item"
-                                        type="text"
-                                        placeholder="Enter comments (Max 250 characters)"
-                                      />
-                                    </td>
+                                               <tr>
+                                                   <td>Product Catalogue</td>
+                                                   <td>
+                                                       <ul class="participate-checkbox">
+                                                           <li>
+                                                               <input type="radio" id="yes" />
+                                                               <label for="yes">Yes</label>
+                                                           </li>
+                                                           <li>
+                                                               <input type="radio" id="no" />
+                                                               <label for="no">No</label>
+                                                           </li>
+                                                           <li>
+                                                               <input type="radio" id="other" />
+                                                               <label for="other">Others</label>
+                                                           </li>
+                                                       </ul>
+                                                   </td>
+                                                   <td>
+                                                       <input class="form-control-item" type="text"
+                                                           placeholder="Enter comments (Max 250 characters)" />
+                                                   </td>
 
-                                    <td>
-                                      <div class="upload-img custom-btn">
-                                        <input type="file" />
-                                        <img
-                                          src="{{ asset('assets-frontend/images/icons/upload.svg') }}"
-                                          alt=""
-                                        />
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      At least 2 years relevant experience on
-                                      similar Field
-                                    </td>
-                                    <td>
-                                      <ul class="participate-checkbox">
-                                        <li>
-                                          <input type="radio" id="yes" />
-                                          <label for="yes">Yes</label>
-                                        </li>
-                                        <li>
-                                          <input type="radio" id="no" />
-                                          <label for="no">No</label>
-                                        </li>
-                                        <li>
-                                          <input type="radio" id="other" />
-                                          <label for="other">Others</label>
-                                        </li>
-                                      </ul>
-                                    </td>
-                                    <td>
-                                      <input
-                                        class="form-control-item"
-                                        type="text"
-                                        placeholder="Enter comments (Max 250 characters)"
-                                      />
-                                    </td>
+                                                   <td>
+                                                       <div class="upload-img custom-btn">
+                                                           <input type="file" />
+                                                           <img src="{{ asset('assets-frontend/images/icons/upload.svg') }}"
+                                                               alt="" />
+                                                       </div>
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <td>
+                                                       At least 2 years relevant experience on
+                                                       similar Field
+                                                   </td>
+                                                   <td>
+                                                       <ul class="participate-checkbox">
+                                                           <li>
+                                                               <input type="radio" id="yes" />
+                                                               <label for="yes">Yes</label>
+                                                           </li>
+                                                           <li>
+                                                               <input type="radio" id="no" />
+                                                               <label for="no">No</label>
+                                                           </li>
+                                                           <li>
+                                                               <input type="radio" id="other" />
+                                                               <label for="other">Others</label>
+                                                           </li>
+                                                       </ul>
+                                                   </td>
+                                                   <td>
+                                                       <input class="form-control-item" type="text"
+                                                           placeholder="Enter comments (Max 250 characters)" />
+                                                   </td>
 
-                                    <td>
-                                      <div class="upload-img custom-btn">
-                                        <input type="file" />
-                                        <img
-                                          src="{{ asset('assets-frontend/images/icons/upload.svg') }}"
-                                          alt=""
-                                        />
-                                      </div>
-                                    </td>
-                                  </tr> -->
+                                                   <td>
+                                                       <div class="upload-img custom-btn">
+                                                           <input type="file" />
+                                                           <img src="{{ asset('assets-frontend/images/icons/upload.svg') }}"
+                                                               alt="" />
+                                                       </div>
+                                                   </td>
+                                               </tr>
                                            </tbody>
                                        </table>
                                        <div onclick="addRow()" class="custom-btn w-auto d-inline-block">
