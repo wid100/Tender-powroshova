@@ -96,10 +96,12 @@ function togglePasswordVisibility() {
 
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
-    togglePassword.style.backgroundImage = "url('assets/img/eye-icon.png')";
+    togglePassword.style.backgroundImage =
+        "url('assets-frontend/img/eye-icon.png')";
   } else {
     passwordInput.type = "password";
-    togglePassword.style.backgroundImage = "url('assets/img/eye-close.png')";
+    togglePassword.style.backgroundImage =
+        "url('assets-frontend/img/eye-close.png')";
   }
 }
 
@@ -110,10 +112,12 @@ function toggleConfirmPasswordVisibility() {
 
   if (confirmPasswordInput.type === "password") {
     confirmPasswordInput.type = "text";
-    toggleConfirmPassword.style.backgroundImage = "url('assets/img/eye-icon.png')";
+    toggleConfirmPassword.style.backgroundImage =
+        "url('assets-frontend/img/eye-icon.png')";
   } else {
     confirmPasswordInput.type = "password";
-    toggleConfirmPassword.style.backgroundImage = "url('assets/img/eye-close.png')";
+    toggleConfirmPassword.style.backgroundImage =
+        "url('assets-frontend/img/eye-close.png')";
   }
 }
 

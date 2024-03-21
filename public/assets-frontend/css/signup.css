@@ -1681,8 +1681,10 @@ pre {
 
 .form-background {
   background: #f5f5f5;
-  padding: 30px 70px 30px 70px;
-  border-radius: 10px;
+  padding: 50px 40px 40px 40px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px #0043822e;
+  border: 1px solid #0043822e;
 }
 @media (max-width: 530px) {
   .form-background {
@@ -1711,6 +1713,7 @@ form.signup-form h2 {
 
 .s-form-footer a {
   font-weight: 500;
+  color: var(--main-color);
 }
 .form-input-fuild {
   width: 100%;
@@ -1730,7 +1733,7 @@ form.signup-form h2 {
   cursor: pointer;
   width: 20px;
   height: 20px;
-  background: url('../img/eye-close.png') center/contain no-repeat; /* Initial close eye icon */
+  background: url('../../assets-frontend/img/eye-close.png') center/contain no-repeat; /* Initial close eye icon */
   background-color: #ffffff;
 }
 
@@ -1747,6 +1750,6 @@ form.signup-form h2 {
   cursor: pointer;
   width: 20px;
   height: 20px;
-  background: url('../img/eye-close.png') center/contain no-repeat; 
+  background: url('../../assets-frontend/img/eye-close.png') center/contain no-repeat; 
   background-color: #ffffff;
 }

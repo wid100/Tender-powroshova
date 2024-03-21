@@ -6,10 +6,13 @@
     font-weight: bold;
     text-align: center;
     padding: 30px 0 40px 0;
+    font-size: 30px;
+    font-weight: 800;
   }
 .forget-pass{
     text-align: end;
     padding: 0 0 10px 0;
+    color: var(--main-color);
 }  
 .forget-pass a{
     color: #555;

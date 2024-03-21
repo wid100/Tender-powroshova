@@ -113,7 +113,7 @@ label {
 }
 
 .custom-btn {
-  background: var(--second-color);
+  background: var(--main-color);
   padding: 6px 20px;
   border-radius: 4px;
   font-size: 13px;
@@ -128,7 +128,8 @@ label {
 }
 
 .custom-btn:hover {
-  background: #de7a01;
+  background: #002d57;
+  color: var(--white-color);
 }
 
 .btn:focus {

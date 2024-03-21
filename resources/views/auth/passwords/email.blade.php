@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -44,4 +44,47 @@
         </div>
     </div>
 </div>
+@endsection --}}
+
+@extends('layouts.user.master')
+
+@section('content')
+    <div class="content mb-5">
+        <div class="content-element">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        <h2 class="login-header">Reset Your Password</h2>
+                        <div class="form-background">
+                            <form class="log-in-form" method="POST" action="{{ route('password.email') }}">
+                                @csrf
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address:</label>
+                                    <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                        name="email" id="email" required
+                                        placeholder="Email"value="{{ old('email') }}" autocomplete="email" autofocus>
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+
+                                <button type="submit" class="custom-btn w-100">Send Password Reset Link</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

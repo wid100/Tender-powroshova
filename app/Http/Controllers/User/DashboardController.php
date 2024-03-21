@@ -5,6 +5,8 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\Tender;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class DashboardController extends Controller
 {
@@ -37,9 +39,31 @@ class DashboardController extends Controller
     {
         return view('user.participate-tender.index');
     }
-    public function changePassword()
+    public function showChangePasswordForm()
     {
-        return view('user.change-password.index');
+        $user = Auth::user();
+        $user = \App\Models\User::find($user->id); // Convert to User model instance
+        return view('user.change-password.index', compact('user'));
+    }
+
+    public function changePassword(Request $request)
+    {
+        $request->validate([
+            'old_password' => ['required', 'string'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+
+        $user = Auth::user();
+        $user = \App\Models\User::find($user->id); // Convert to User model instance
+
+        if (!Hash::check($request->old_password, $user->password)) {
+            return redirect()->back()->with('error', 'The old password does not match our records.');
+        }
+
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        return redirect()->route('user.dashboard')->with('success', 'Password changed successfully.');
     }
     /**
      * Show the form for creating a new resource.

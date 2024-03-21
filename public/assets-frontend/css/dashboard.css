@@ -583,3 +583,7 @@ img.user-img {
 .dashboard-wrapper {
     padding-top: 77px;
 }
+.live-change-wrapper{
+    background: none;
+    padding: 0;
+}
