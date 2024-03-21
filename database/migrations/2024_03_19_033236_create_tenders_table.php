@@ -22,7 +22,10 @@ return new class extends Migration
             $table->text('contact_details')->nullable();
             $table->string('start_date');
             $table->string('end_date');
+            $table->string('govment_price')->nullable();
+            $table->string('shedeul_price')->nullable();
             $table->string('method')->nullable();
+            $table->text('condition')->nullable();
             $table->boolean('status')->default(false);
             $table->timestamps();
         });
