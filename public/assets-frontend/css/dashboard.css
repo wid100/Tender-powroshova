@@ -517,6 +517,9 @@ ul.participate-checkbox {
 .form-input-item {
     margin-bottom: 15px;
 }
+.tender-interface .form-input-item input{
+    margin-bottom: 10px;
+}
 .participate-tender-table td,
 .table th {
     text-align: center;
@@ -586,4 +589,7 @@ img.user-img {
 .live-change-wrapper{
     background: none;
     padding: 0;
+}
+p.tender-form-header {
+    margin-bottom: 15px;
 }
