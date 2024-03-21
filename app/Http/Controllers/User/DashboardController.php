@@ -21,10 +21,7 @@ class DashboardController extends Controller
         $tenderCount = Tender::count();
         return view('user.dashboard', compact('tenders', 'tenderCount'));
     }
-    public function userMangement()
-    {
-        return view('user.user-mangement.index');
-    }
+
     public function liveTender()
     {
         $tenders = Tender::get();
