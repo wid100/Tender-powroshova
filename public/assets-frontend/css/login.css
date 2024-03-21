@@ -1,6 +1,12 @@
 .log-in-form h2 {
     text-align: center;
   }
+  .content-element {
+    padding-top: 100px;
+    min-height: 90vh;
+}
+
+
 .login-header{
     color: #004382;
     font-weight: bold;

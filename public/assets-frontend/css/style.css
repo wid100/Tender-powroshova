@@ -4,6 +4,10 @@
 .home-header{
     background-color: var(--main-color);
     color: var(--white-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
 }
 .navbar-content{
     display: flex;
@@ -56,7 +60,7 @@
 /* ================================================== */
 /*============= Hero section css =====================*/
 section.hero-section {
-    margin-top: 50px;
+    margin-top: 120px;
 }
 .hero-header h1{
  color:var(--main-color);
