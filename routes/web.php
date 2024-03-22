@@ -29,6 +29,7 @@ Route::namespace('App\Http\Controllers')->group(function () {
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
         Route::resource('tender', 'TenderController');
+        Route::resource('participate', 'ParticipateController');
     });
 });
 
@@ -47,6 +48,7 @@ Route::namespace('App\Http\Controllers')->group(
 
             Route::resource('supplier', 'SupplierController');
             Route::get('/user/supplier', 'SupplierController@show');
+            Route::resource('participate', 'ParticipateController');
         });
     }
 );

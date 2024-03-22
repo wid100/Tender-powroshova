@@ -32,11 +32,9 @@
                             <a href="{{ route('admin.tender.index') }}" class="nav-link">Tender</a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/email/read.html" class="nav-link">Read</a>
+                            <a href="{{ route('admin.participate.index') }}" class="nav-link">Participate</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/email/compose.html" class="nav-link">Compose</a>
-                        </li>
+
                     </ul>
                 </div>
             </li>

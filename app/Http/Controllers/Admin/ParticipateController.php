@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Participate;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class ParticipateController extends Controller
      */
     public function index()
     {
-        //
+        $participates = Participate::all();
+        return view('admin.participate.index', compact('participates'));
     }
 
     /**
@@ -41,10 +43,10 @@ class ParticipateController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Participate  $participate
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Participate $participate)
+    public function show($id)
     {
         //
     }
@@ -52,10 +54,10 @@ class ParticipateController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Participate  $participate
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Participate $participate)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +66,10 @@ class ParticipateController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Participate  $participate
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Participate $participate)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,11 +77,15 @@ class ParticipateController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Participate  $participate
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
     public function destroy(Participate $participate)
     {
-        //
+        $participate->delete();
+
+        return redirect()->route('admin.participate.index')->with('success', 'Tender deleted successfully');
     }
 }
