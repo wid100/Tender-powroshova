@@ -46,6 +46,9 @@ class TenderController extends Controller
             'start_date' => 'required|string',
             'end_date' => 'required|string',
             'method' => 'nullable|string',
+            'condition' => 'nullable|string',
+            'govment_price' => 'nullable|string',
+            'shedeul_price' => 'nullable|string',
         ]);
         $tenderId = Str::random(8);
 
@@ -61,6 +64,9 @@ class TenderController extends Controller
         $tender->start_date = $validatedData['start_date'];
         $tender->end_date = $validatedData['end_date'];
         $tender->method = $validatedData['method'];
+        $tender->condition = $validatedData['condition'];
+        $tender->govment_price = $validatedData['govment_price'];
+        $tender->shedeul_price = $validatedData['shedeul_price'];
         $tender->tender_id = $tenderId;
         $tender->status = $tender_status;
 
@@ -112,6 +118,9 @@ class TenderController extends Controller
             'end_date' => 'required|string',
             'method' => 'nullable|string',
             'status' => 'nullable|boolean',
+            'condition' => 'nullable|string',
+            'govment_price' => 'nullable|string',
+            'shedeul_price' => 'nullable|string',
         ]);
 
         // Update the tender attributes
@@ -121,7 +130,9 @@ class TenderController extends Controller
         $tender->start_date = $validatedData['start_date'];
         $tender->end_date = $validatedData['end_date'];
         $tender->method = $validatedData['method'];
-
+        $tender->condition = $validatedData['condition'];
+        $tender->govment_price = $validatedData['govment_price'];
+        $tender->shedeul_price = $validatedData['shedeul_price'];
         if ($request->has('status')) {
             $tender->status = $validatedData['status'];
         }

@@ -26,8 +26,8 @@
                                         <th>ID</th>
                                         <th>Tender Id</th>
                                         <th>Name</th>
-                                        <th>Description</th>
-                                        <th>Contact Details</th>
+                                        <th>Gov Price</th>
+                                        <th>Shedeul Price</th>
                                         <th>Method</th>
                                         <th>Start Date</th>
                                         <th>End Date</th>
@@ -43,8 +43,8 @@
                                             <td>{{ $tender->tender_id }}</td>
                                             <td>{{ $tender->name }}</td>
 
-                                            <td>{!! Str::limit($tender->description, 50) !!}</td>
-                                            <td>{{ $tender->contact_details }}</td>
+                                            <td>{{ $tender->govment_price }}</td>
+                                            <td>{{ $tender->shedeul_price }}</td>
                                             <td>{{ $tender->method }}</td>
                                             <td>{{ $tender->start_date }}</td>
                                             <td>{{ $tender->end_date }}</td>

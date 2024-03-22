@@ -65,14 +65,14 @@
                        <div class="col-md-6">
                            <div class="form-input-field">
                                <label for="trade_license_expared">Trade License Expiration Date</label>
-                               <input type="text" id="trade_license_expared" name="trade_license_expared"
+                               <input type="date" id="trade_license_expared" name="trade_license_expared"
                                    value="{{ $supplier->trade_license_expared }}" />
                            </div>
                        </div>
                        <div class="col-md-6">
                            <div class="form-input-field">
                                <label for="trade_license_renewed">Trade License Renewal/Issue Date</label>
-                               <input type="text" id="trade_license_renewed" name="trade_license_renewed"
+                               <input type="date" id="trade_license_renewed" name="trade_license_renewed"
                                    value="{{ $supplier->trade_license_renewed }}" />
                            </div>
                        </div>

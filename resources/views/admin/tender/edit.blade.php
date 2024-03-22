@@ -53,10 +53,26 @@
 
                                     </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="govment_price" class="form-label">Govment Price</label>
+                                        <input type="text" class="form-control" name="govment_price" id="govment_price"
+                                            value="{{ $tender->govment_price }}">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="shedeul_price" class="form-label">Schedule Price</label>
+                                        <input type="text" class="form-control" name="shedeul_price" id="shedeul_price"
+                                            value="{{ $tender->shedeul_price }}">
+                                    </div>
+                                </div>
+
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label for="contact_details" class="form-label">Contact Details</label>
-                                        <textarea class="form-control" name="contact_details" id="contact_details" rows="5">{{ $tender->contact_details }}</textarea>
+                                        <textarea class="form-control" name="contact_details" id="easyMdeExample2" rows="5">{!! $tender->contact_details !!}</textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -65,7 +81,12 @@
                                         <textarea class="form-control" name="description" id="easyMdeExample" rows="5">{!! $tender->description !!}</textarea>
                                     </div>
                                 </div>
-
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label for="condition" class="form-label">Condition</label>
+                                        <textarea class="form-control" name="condition" id="easyMdeExample3" rows="5">{!! $tender->condition !!}</textarea>
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
                                     <div class="form-check mb-3">
                                         <input type="checkbox" class="form-check-input" id="status" name="status"
