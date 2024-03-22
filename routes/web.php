@@ -40,7 +40,7 @@ Route::namespace('App\Http\Controllers')->group(
             Route::get('/user-mangement', [UserSupplierController::class, 'index'])->name('user-mangement');
             Route::get('/live-tender', [UserDashboardController::class, 'liveTender'])->name('live-tender');
             Route::get('/live-tender/{id}', [UserDashboardController::class, 'liveTenderId'])->name('live-tender.show');
-            Route::get('/participate-tender', [UserDashboardController::class, 'ParticipateTender'])->name('participate-tender');
+            Route::get('/participate-tender/{id}', [UserDashboardController::class, 'ParticipateTender'])->name('participate-tender');
 
             Route::get('/change-password', [UserDashboardController::class, 'showChangePasswordForm'])->name('change-password');
             Route::post('/change-password', [UserDashboardController::class, 'changePassword'])->name('change-password.post');

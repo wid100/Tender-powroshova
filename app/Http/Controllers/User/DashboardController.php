@@ -32,9 +32,10 @@ class DashboardController extends Controller
         $tender = Tender::find($id);
         return view('user.live-tender.show', compact('tender'));
     }
-    public function ParticipateTender()
+    public function ParticipateTender($id)
     {
-        return view('user.participate-tender.index');
+        $tender = Tender::find($id);
+        return view('user.participate-tender.index', compact('tender'));
     }
     public function showChangePasswordForm()
     {

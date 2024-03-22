@@ -40,7 +40,7 @@
                     <div class="row">
                         <div class="col-md-6 mb-4">
                             <div class="tender-contact-item">
-                                {{$tender->contact_details}}
+                                {{ $tender->contact_details }}
                             </div>
                         </div>
                         {{-- <div class="col-md-6 mb-4">
@@ -57,7 +57,7 @@
                         </div> --}}
                     </div>
                 </div>
-                <a href="{{route('user.participate-tender')}}" class="tender-appy-btn custom-btn mt-3">
+                <a href="{{ route('user.participate-tender', $tender->id) }}" class="tender-appy-btn custom-btn mt-3">
                     Apply Online
                 </a>
             </div>
