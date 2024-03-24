@@ -16,6 +16,13 @@
 
                         </tr>
                         <tr>
+                            <td>Potential government value</td>
+                            <td class="bg-white">{{ $tender->govment_price }}</td>
+                            <td>Schedule price</td>
+                            <td class="bg-white">{{ $tender->shedeul_price }}</td>
+
+                        </tr>
+                        <tr>
                             <td>Opening Date</td>
                             <td class="bg-white">{{ $tender->start_date }}</td>
                             <td>Last Submission Date</td>
@@ -57,10 +64,18 @@
                         </div> --}}
                     </div>
                 </div>
-                <a href="{{ route('user.participate-tender', $tender->id) }}" class="tender-appy-btn custom-btn mt-3">
-                    Apply Online
-                </a>
             </div>
+            <div class="tender-information mt-3 mb-3">
+                <h2 class="table-text-list">
+                    Tender Condition
+                </h2>
+                <div class="tender-information-content">
+                    {{ $tender->description }}
+                </div>
+            </div>
+            <a href="{{ route('user.participate-tender', $tender->id) }}" class="tender-appy-btn custom-btn mt-3">
+                Apply Online
+            </a>
         </div>
     </div>
 @endsection

@@ -11,6 +11,8 @@
                            <tr>
                                <th scope="col">Tender No.</th>
                                <th scope="col">Tender Title</th>
+                               <th scope="col">Potential government value</th>
+                               <th scope="col">Schedule price</th>
                                <th scope="col">Publish Date</th>
                                <th scope="col">Last Submission Date</th>
 
@@ -28,6 +30,8 @@
                                        onclick="window.location='{{ route('user.live-tender.show', ['id' => $tender->id]) }}';">
                                        <td>{{ $tender->tender_id }}</td>
                                        <td>{{ $tender->name }}</td>
+                                       <td>{{ $tender->govment_price }}</td>
+                                       <td>{{ $tender->shedeul_price }}</td>
                                        <td>{{ $tender->start_date }}</td>
                                        <td>{{ $tender->end_date }}</td>
                                    </tr>
