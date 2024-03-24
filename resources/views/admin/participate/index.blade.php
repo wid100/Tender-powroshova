@@ -50,7 +50,7 @@
                                                 @if ($participate->status == 1)
                                                     <span class="badge bg-success">Active</span>
                                                 @else
-                                                    <span class="badge bg-danger">No Status</span>
+                                                    <span class="badge bg-danger">Pending</span>
                                                 @endif
                                             </td>
                                             <td>

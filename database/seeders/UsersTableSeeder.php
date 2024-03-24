@@ -19,17 +19,17 @@ class UsersTableSeeder extends Seeder
             'role_id' => '1',
             'name' => 'Super Admin',
             'country' => 'Bangladesh',
-            'phone' => '01792892198',
-            'email' => 'helal@admin.com',
-            'password' => bcrypt('helaluddin'),
+            'phone' => '00000000000',
+            'email' => 'tender@admin.com',
+            'password' => bcrypt('tender'),
         ]);
         DB::table('users')->insert([
             'role_id' => '2',
-            'name' => 'user',
+            'name' => 'Tender User',
             'country' => 'Bangladesh',
-            'phone' => '01792892198',
-            'email' => 'helal@user.com',
-            'password' => bcrypt('helaluddin'),
+            'phone' => '00000000000',
+            'email' => 'tender@user.com',
+            'password' => bcrypt('tender'),
         ]);
         DB::table('users')->insert([
             'role_id' => '3',
