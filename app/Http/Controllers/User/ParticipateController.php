@@ -17,7 +17,23 @@ class ParticipateController extends Controller
      */
     public function index()
     {
-        //
+        $userId = Auth::id();
+
+        $participations = Participate::where('user_id', $userId)->get();
+        return view('user.my-tender.index', compact('participations'));
+    }
+
+
+
+    public function AwardTenderList()
+    {
+        $userId = Auth::id();
+
+        $awardTenders = Participate::where('user_id', $userId)
+            ->where('status', 1)
+            ->get();
+
+        return view('user.award-tender-list.index', compact('awardTenders'));
     }
 
     /**
@@ -94,7 +110,7 @@ class ParticipateController extends Controller
         $participate->b_witness_district = $request->input('b_witness_district');
         // dd($participate);
         $participate->save();
-        return redirect()->back()->with('success', 'Participant information has been stored successfully');
+        return redirect()->route('user.my-tender')->with('success', 'Participant information has been stored successfully');
     }
     /**
      * Display the specified resource.

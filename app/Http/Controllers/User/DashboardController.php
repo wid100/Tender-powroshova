@@ -18,10 +18,13 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        $userId = Auth::id();
+
+        $participations = Participate::where('user_id', $userId)->get();
         $tenders = Tender::get();
-        $participateTenders=Participate::get();
+        $participateTenders = Participate::get();
         $tenderCount = Tender::count();
-        return view('user.dashboard', compact('tenders', 'tenderCount', 'participateTenders'));
+        return view('user.dashboard', compact('tenders', 'tenderCount', 'participateTenders', 'participations'));
     }
 
     public function liveTender()
@@ -41,14 +44,22 @@ class DashboardController extends Controller
     }
 
 
-    public function MyTenderList(){
-        $myTenders=Tender::get();
-        return view('user.my-tender.index', compact('myTenders'));
-    }
-    public function AwardTenderList(){
-        $awardTenders=Tender::get();
-        return view('user.award-tender-list.index', compact('awardTenders'));
-    }
+    // public function MyTenderList()
+    // {
+    //     $userId = Auth::id();
+
+    //     $participations = Participate::where('user_id', $userId)->get();
+
+    //     return view('user.my-tender.index', compact('participations'));
+    // }
+
+
+
+    // public function AwardTenderList()
+    // {
+    //     $awardTenders = Tender::get();
+    //     return view('user.award-tender-list.index', compact('awardTenders'));
+    // }
 
 
 
@@ -79,67 +90,5 @@ class DashboardController extends Controller
         $user->save();
 
         return redirect()->route('user.dashboard')->with('success', 'Password changed successfully.');
-    }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

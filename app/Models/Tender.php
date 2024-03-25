@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Tender extends Model
 {
     use HasFactory;
+
+    public function participates()
+    {
+        return $this->hasMany(Participate::class);
+    }
 }

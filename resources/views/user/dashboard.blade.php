@@ -166,7 +166,6 @@
                                                    @endif
                                                @endforeach
 
-
                                            </div>
                                        </div>
                                    </div>
@@ -196,156 +195,58 @@
                                    <div class="featured-tenders-swiper">
                                        <div class="swiper-container swiper">
                                            <div class="swiper-wrapper">
-                                               <div class="swiper-slide">
-                                                   <div class="swiper-content-featured-tenders">
-                                                       <p class="swipper-head-text">
-                                                           RFQ for Printer (Specifications Attached)
-                                                       </p>
-                                                       <div class="counting-part">
-                                                           <span>5Days: 23Hrs: 2Mins</span>
-                                                       </div>
-
-                                                       <div class="row">
-                                                           <div class="col-6">
-                                                               <span>Ref No:</span>
-                                                               <p>BPD/2024/RFQ-528</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Opening Date:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Last Submission:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Closing Date:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
-                                                           </div>
-                                                       </div>
-                                                       <a href="">read more</a>
-                                                   </div>
-                                               </div>
-                                               <div class="swiper-slide">
-                                                   <div class="swiper-content-featured-tenders">
-                                                       <p class="swipper-head-text">
-                                                           RFQ for Printer (Specifications Attached)
-                                                       </p>
-                                                       <div class="counting-part">
-                                                           <span>5Days: 23Hrs: 2Mins</span>
-                                                       </div>
-
-                                                       <div class="row">
-                                                           <div class="col-6">
-                                                               <span>Ref No:</span>
-                                                               <p>BPD/2024/RFQ-528</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Opening Date:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Last Submission:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Closing Date:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
+                                               @foreach ($participations as $participant)
+                                                   @php
+                                                       $endDate = \Carbon\Carbon::parse($participant->end_date);
+                                                       $now = \Carbon\Carbon::now();
+                                                       $duration = $endDate->diff($now); // Calculate the difference between end date and current date
+                                                       $days = $duration->d;
+                                                       $hours = $duration->h;
+                                                       $minutes = $duration->i;
+                                                       // Check if the end date has already passed
+                                                       if ($endDate < $now) {
+                                                           $days = -$days;
+                                                           $hours = -$hours;
+                                                           $minutes = -$minutes;
+                                                       }
+                                                   @endphp
+                                                   @if ($endDate->isFuture())
+                                                       <div class="swiper-slide">
+                                                           <div class="swiper-content-featured-tenders">
+                                                               <p class="swipper-head-text">
+                                                                   {{ $participant->tender->name }}
+                                                               </p>
+                                                               <div class="counting-part">
+                                                                   <span
+                                                                       id="countdown_{{ $participant->id }}">{{ $days }}
+                                                                       Days: {{ $hours }} Hrs: {{ $minutes }}
+                                                                       Mins</span>
+                                                               </div>
+                                                               <div class="row">
+                                                                   <div class="col-6">
+                                                                       <span>Ref No:</span>
+                                                                       <p>{{ $participant->tender->tender_id }}</p>
+                                                                   </div>
+                                                                   <div class="col-6">
+                                                                       <span>Opening Date:</span>
+                                                                       <p>{{ $participant->tender->start_date }}</p>
+                                                                   </div>
+                                                                   <div class="col-6">
+                                                                       <span>Last Submission:</span>
+                                                                       <p>{{ $participant->tender->end_date }}</p>
+                                                                   </div>
+                                                                   <div class="col-6">
+                                                                       <span>Closing Date:</span>
+                                                                       <p>{{ $participant->tender->end_date }}</p>
+                                                                   </div>
+                                                               </div>
+                                                               <a
+                                                                   href="{{ route('user.live-tender.show', ['id' => $participant->id]) }}">read
+                                                                   more</a>
                                                            </div>
                                                        </div>
-                                                       <a href="">read more</a>
-                                                   </div>
-                                               </div>
-                                               <div class="swiper-slide">
-                                                   <div class="swiper-content-featured-tenders">
-                                                       <p class="swipper-head-text">
-                                                           RFQ for Printer (Specifications Attached)
-                                                       </p>
-                                                       <div class="counting-part">
-                                                           <span>5Days: 23Hrs: 2Mins</span>
-                                                       </div>
-
-                                                       <div class="row">
-                                                           <div class="col-6">
-                                                               <span>Ref No:</span>
-                                                               <p>BPD/2024/RFQ-528</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Opening Date:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Last Submission:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Closing Date:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
-                                                           </div>
-                                                       </div>
-                                                       <a href="">read more</a>
-                                                   </div>
-                                               </div>
-                                               <div class="swiper-slide">
-                                                   <div class="swiper-content-featured-tenders">
-                                                       <p class="swipper-head-text">
-                                                           RFQ for Printer (Specifications Attached)
-                                                       </p>
-                                                       <div class="counting-part">
-                                                           <span>5Days: 23Hrs: 2Mins</span>
-                                                       </div>
-
-                                                       <div class="row">
-                                                           <div class="col-6">
-                                                               <span>Ref No:</span>
-                                                               <p>BPD/2024/RFQ-528</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Opening Date:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Last Submission:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Closing Date:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
-                                                           </div>
-                                                       </div>
-                                                       <a href="">read more</a>
-                                                   </div>
-                                               </div>
-                                               <div class="swiper-slide">
-                                                   <div class="swiper-content-featured-tenders">
-                                                       <p class="swipper-head-text">
-                                                           RFQ for Printer (Specifications Attached)
-                                                       </p>
-                                                       <div class="counting-part">
-                                                           <span>5Days: 23Hrs: 2Mins</span>
-                                                       </div>
-
-                                                       <div class="row">
-                                                           <div class="col-6">
-                                                               <span>Ref No:</span>
-                                                               <p>BPD/2024/RFQ-528</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Opening Date:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Last Submission:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
-                                                           </div>
-                                                           <div class="col-6">
-                                                               <span>Closing Date:</span>
-                                                               <p>07/03/2024 03:00 PM</p>
-                                                           </div>
-                                                       </div>
-                                                       <a href="">read more</a>
-                                                   </div>
-                                               </div>
+                                                   @endif
+                                               @endforeach
                                                <!-- Add more slides as needed -->
                                            </div>
                                            <!-- Add navigation buttons -->
