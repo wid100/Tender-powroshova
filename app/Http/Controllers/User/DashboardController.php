@@ -39,6 +39,21 @@ class DashboardController extends Controller
         $tender = Tender::find($id);
         return view('user.participate-tender.index', compact('tender'));
     }
+
+
+    public function MyTenderList(){
+        $myTenders=Tender::get();
+        return view('user.my-tender.index', compact('myTenders'));
+    }
+    public function AwardTenderList(){
+        $awardTenders=Tender::get();
+        return view('user.award-tender-list.index', compact('awardTenders'));
+    }
+
+
+
+
+
     public function showChangePasswordForm()
     {
         $user = Auth::user();

@@ -43,7 +43,19 @@ Route::namespace('App\Http\Controllers')->group(
             Route::get('/live-tender/{id}', [UserDashboardController::class, 'liveTenderId'])->name('live-tender.show');
             Route::get('/participate-tender/{id}', [UserDashboardController::class, 'ParticipateTender'])->name('participate-tender');
 
-            Route::get('/change-password', [UserDashboardController::class, 'showChangePasswordForm'])->name('change-password');
+                Route::get('/my-tender', [UserDashboardController::class, 'MyTenderList'])->name('my-tender');
+                Route::get('/award-tender', [UserDashboardController::class, 'AwardTenderList'])->name('award-tender');
+
+
+
+
+
+
+
+
+
+
+                Route::get('/change-password', [UserDashboardController::class, 'showChangePasswordForm'])->name('change-password');
             Route::post('/change-password', [UserDashboardController::class, 'changePassword'])->name('change-password.post');
 
             Route::resource('supplier', 'SupplierController');
