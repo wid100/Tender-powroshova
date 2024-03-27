@@ -52,12 +52,6 @@ Route::namespace('App\Http\Controllers')->group(
 
 
 
-
-
-
-
-
-
             Route::get('/change-password', [UserDashboardController::class, 'showChangePasswordForm'])->name('change-password');
             Route::post('/change-password', [UserDashboardController::class, 'changePassword'])->name('change-password.post');
             Route::get('/print/tender/{id}', 'ParticipateController@show')->name('print.participate');
