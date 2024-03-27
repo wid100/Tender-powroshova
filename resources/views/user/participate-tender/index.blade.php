@@ -75,7 +75,7 @@
                                        <div class="col-md-12">
                                            <div class="form-input-item">
                                                <p class="tender-form-header">০২। ১৪৩১ বাংলা সনের দরপত্র দাতা কর্তৃক ইজারা
-                                                   প্রদর </p>
+                                                   দর </p>
                                                <div class="row">
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="">অংকে

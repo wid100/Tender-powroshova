@@ -7,13 +7,13 @@
           </div>
           <div class="dashboard-right">
               <div class="dashboard-social-link d-flex align-items-center justify-content-end gap-4">
-                  <a href="#" class="social-list d-flex align-items-center gap-2">
+                  <a href="mailto:ramgonjpourashava@gmail.com" class="social-list d-flex align-items-center gap-2">
                       <img src="{{ asset('assets-frontend/images/icons/email.svg') }}" alt="" />
-                      <span>tendar@ramgunjpouroshova.com </span>
+                      <span>ramgonjpourashava@gmail.com</span>
                   </a>
-                  <a href="#" class="social-list d-flex align-items-center gap-2">
+                  <a href="tel:+8801836860268" class="social-list d-flex align-items-center gap-2">
                       <img src="{{ asset('assets-frontend/images/icons/number.svg') }}" alt="" />
-                      <span>123-456-7890</span>
+                      <span>+8801836860268</span>
                   </a>
               </div>
               <div class="dashboard-profile d-flex align-items-center justify-content-end gap-4">

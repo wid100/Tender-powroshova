@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\User;
 
+use Carbon\Carbon;
+
 use App\Http\Controllers\Controller;
 
 use App\Models\Participate;
@@ -23,6 +25,28 @@ class ParticipateController extends Controller
         return view('user.my-tender.index', compact('participations'));
     }
 
+    public function CloseTender()
+    {
+        // Get the authenticated user's ID
+        $userId = Auth::id();
+
+        // Get today's date
+        $today = Carbon::today();
+
+        // Query to get participations for the authenticated user
+        $participations = Participate::where('user_id', $userId)
+            ->with('tender') // Eager load the related tender
+            ->get();
+
+        // Filter the participations to include only tenders closing today
+        $closeTenders = $participations->filter(function ($participation) use ($today) {
+            return Carbon::parse($participation->tender->end_date)->isSameDay($today);
+        });
+
+        // Return the view with the filtered close tenders
+        return view('user.close-tender.index', compact('closeTenders'));
+    }
+    
 
 
     public function AwardTenderList()

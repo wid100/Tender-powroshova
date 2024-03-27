@@ -41,11 +41,13 @@ Route::namespace('App\Http\Controllers')->group(
             Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
             Route::get('/user-mangement', [UserSupplierController::class, 'index'])->name('user-mangement');
             Route::get('/live-tender', [UserDashboardController::class, 'liveTender'])->name('live-tender');
+            Route::get('/latest-tender', [UserDashboardController::class, 'latestTender'])->name('latest-tender');
             Route::get('/live-tender/{id}', [UserDashboardController::class, 'liveTenderId'])->name('live-tender.show');
             Route::get('/participate-tender/{id}', [UserDashboardController::class, 'ParticipateTender'])->name('participate-tender');
 
             Route::get('/my-tender', [ParticipateController::class, 'index'])->name('my-tender');
             Route::get('/award-tender', [ParticipateController::class, 'AwardTenderList'])->name('award-tender');
+            Route::get('/close-tender', [ParticipateController::class, 'CloseTender'])->name('close-tender');
 
 
 

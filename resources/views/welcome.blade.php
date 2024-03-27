@@ -25,7 +25,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="hero-custom-btn">
+                                    <a href="{{ route('user.close-tender') }}" class="hero-custom-btn">
                                         <div class="live-logo-img">
                                             <img src="{{ asset('assets-frontend/home-image/closing-today.png') }}"
                                                 alt="CLOSING TODAY">
@@ -45,7 +45,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="hero-custom-btn">
+                                    <a href="{{ route('user.award-tender') }}" class="hero-custom-btn">
                                         <div class="live-logo-img">
                                             <img src="{{ asset('assets-frontend/home-image/award-tender.png') }}"
                                                 alt="AWARD TENDER">
@@ -60,12 +60,12 @@
                             <div class="hero-text">
                                 <p>জনাব/ জনাবা,</p>
                                 <p>আপনাকে রামগঞ্জ পৌরসভার পক্ষ থেকে শুভেচ্ছা আপনি জেনে আনন্দিত হবেন, যে রামগঞ্জ পৌরসভার
-                                    প্রকিউরমেন্টের বিভিন্ন চাহিদার বিপরীতে টেন্ডারে অংশগ্রহণ প্রক্রিয়া আগামীতে (০১ মার্চ
+                                    প্রকিউরমেন্টের বিভিন্ন চাহিদার বিপরীতে টেন্ডারে অংশগ্রহণ প্রক্রিয়া আগামীতে (20 মার্চ
                                     ২০২৪ থেকে) শুধু মাত্র অনলাইনে কোটেশন জমা দেয়া যাবে</p>
                                 <p>এমতাবস্থায়, অনলাইনে টেন্ডার প্রক্রিয়ায় অংশগ্রহণ করার ধাপ গুলো ও করণীয় সম্পর্কে জানতে
                                     সংযুক্ত প্রেজেন্টেশনটি দেখুন এবং ই-টেন্ডারে রেজিস্ট্রেশন করার জন্য নিচের লিঙ্কে ভিজিট
-                                    করুন। <br>ই- টেন্ডার লিঙ্কঃ <a href="index.html">tender.ramgonjpouroshova.com</a></p>
-                                <p><a href="/">tender.ramgonjpouroshova.com</a> ভিজিট করলে Featured Tenders থেকে
+                                    করুন। <br>ই- টেন্ডার লিঙ্কঃ <a href="/">ramgonjpourashava.com/e-tender</a></p>
+                                <p><a href="/">https://ramgonjpourashava.com/e-tender</a> ভিজিট করলে Featured Tenders থেকে
                                     শুধুমাত্র টেন্ডার গুলো দেখা যাবে ই-টেন্ডারে ভেন্ডর/ সাপ্লায়ার রেজিস্ট্রেশন সম্পন্ন হওয়া
                                     ব্যাতিত টেন্ডার প্রক্রিয়ায় অংশগ্রহণ করা যাবে না</p>
                                 <p>যদি আপনার প্রতিষ্ঠানের নাম ইতিমধ্যে রেজিস্ট্রেশন করা থাকে তাহলে আপনার User ID ও প্রাথমিক
@@ -73,8 +73,8 @@
                                     নিজেই অনলাইনে দরপত্র জমাদান প্রক্রিয়া সম্পন্ন করুন প্রয়োজনে আমাদের সহযোগিতা নিন।</p>
                                 <p>মনে রাখবেন, আগামীতে ই-মেইলে কিংবা বক্সে কোটেশন জমা দেয়া যাবে না</p>
                                 <p>বিষয়টি আপনার অবগতি ও প্রয়োজনীয় করণীয় এর জন্য জানানো হল</p>
-                                <p>সহযোগীতার জন্য যোগাযোগ করুনঃ <br> Cell: <a href="tel:1234567890">123-456-7890</a></p>
-                                <p><a href="mailto:support@ramgonjpouroshova.com">support@ramgonjpouroshova.com</a> <br>
+                                <p>সহযোগীতার জন্য যোগাযোগ করুনঃ <br> Cell: <a href="tel:+8801836860268">+8801836860268</a></p>
+                                <p><a href="mailto:ramgonjpourashava@gmail.com">ramgonjpourashava@gmail.com</a> <br>
                                     অথবা প্রকিউরমেন্টের সংশ্লিষ্ট ব্যাক্তির সাথে যোগাযোগ করুন।</p>
 
                                 </p>

@@ -25,7 +25,7 @@
                        </div>
                        <!-- CLOSING TODAY -->
                        <div class="col-md-3">
-                           <div class="sd-box">
+                           <a href="{{ route('user.close-tender') }}" class="sd-box">
                                <div class="sd-box-icons">
                                    <img src="{{ asset('assets-frontend/sd-images/Frame(1).png') }}" alt="" />
                                </div>
@@ -33,28 +33,28 @@
                                    <p>CLOSING TODAY</p>
                                </div>
                                <div class="sd-box-values">
-                                   <p>12</p>
+                                   <p>{{ $closeTenderCount }}</p>
                                </div>
-                           </div>
+                           </a>
                        </div>
                        <!-- TENDER NOTICE -->
                        <div class="col-md-3">
-                           <div class="sd-box">
+                           <a href="{{ route('user.latest-tender') }}" class="sd-box">
                                <div class="sd-box-icons">
                                    <img src="{{ asset('assets-frontend/sd-images/clarity_new-solid.png') }}"
                                        alt="" />
                                </div>
                                <div class="sd-box-text">
-                                   <p>TENDER NOTICE</p>
+                                   <p>TENDER LATEST</p>
                                </div>
                                <div class="sd-box-values">
-                                   <p>12</p>
+                                    <p>{{ $tenderCount }}</p>
                                </div>
-                           </div>
+                           </a>
                        </div>
                        <!-- AWARD TENDER -->
                        <div class="col-md-3">
-                           <div class="sd-box">
+                           <a href="{{ route('user.award-tender') }}" class="sd-box">
                                <div class="sd-box-icons">
                                    <img src="{{ asset('assets-frontend/sd-images/material-symbols-light_award-star-outline-rounded.png') }}"
                                        alt="" />
@@ -63,9 +63,9 @@
                                    <p>AWARD TENDER</p>
                                </div>
                                <div class="sd-box-values">
-                                   <p>12</p>
+                                    <p>{{ $awardedTenderCount }}</p>
                                </div>
-                           </div>
+                           </a>
                        </div>
                    </div>
                </div>
