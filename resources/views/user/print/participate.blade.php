@@ -5,7 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>দরপত্র তফসিল</title>
+    <title> {{ $participate->title }}</title>
+
+    <script>
+        window.onload = function() {
+            window.print();
+        };
+    </script>
 </head>
 
 <body style="margin: 0; padding: 0">
@@ -23,12 +29,11 @@
                 border: 0;
                 background-color: #ffffff;
                 border-spacing: 0 !important;
-                padding: 0;
+                padding: 30px;
                 margin: 0 auto;
 
               ">
 
-                        {{ $participate->title }}
                         <tr>
                             <td
                                 style="border-bottom: 1px solid #000; padding-bottom: 5px; display: flex; justify-content: center;">
@@ -157,7 +162,6 @@
                                                                     <span
                                                                         style="border-bottom: 1px dotted #000;flex-grow: 1; min-width: 150px;padding-left: 5px;">{{ $participate->ejara_pay_amount }}</span>
 
-
                                                                 </div>
                                                             </div>
                                                             </p>
@@ -186,27 +190,28 @@
                                                                 </tr>
                                                                 <tr>
                                                                     @php
-                                                                        $refundableArray = json_decode(
+                                                                        $refundable = json_decode(
                                                                             $participate->refundable,
                                                                             true,
                                                                         );
                                                                     @endphp
+
                                                                     <td
                                                                         style="border: 1px solid #000; padding: 8px; text-align: left;">
-                                                                        @if (!empty($refundableArray['bank_name']))
-                                                                            {{ $refundableArray['bank_name'] }}
+                                                                        @if (!empty($refundable['name']))
+                                                                            {{ $refundable['name'] }}
                                                                         @endif
                                                                     </td>
                                                                     <td
                                                                         style="border: 1px solid #000; padding: 8px; text-align: left;">
-                                                                        @if (!empty($refundableArray['draft_no']))
-                                                                            {{ $refundableArray['draft_no'] }}
+                                                                        @if (!empty($refundable['drapt_name']))
+                                                                            {{ $refundable['drapt_name'] }}
                                                                         @endif
                                                                     </td>
                                                                     <td
                                                                         style="border: 1px solid #000; padding: 8px; text-align: left;">
-                                                                        @if (!empty($refundableArray['amount']))
-                                                                            {{ $refundableArray['amount'] }}
+                                                                        @if (!empty($refundable['amount']))
+                                                                            {{ $refundable['amount'] }}
                                                                         @endif
                                                                     </td>
                                                                 </tr>
@@ -352,6 +357,11 @@
                                                         </div>
                                                     </td>
                                                 </tr>
+
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
                                                 <tr>
                                                     <td style="text-align: left;">
                                                         <div style="line-height: 140%;">

@@ -127,7 +127,7 @@
                                        </div>
                                        <div class="col-md-12">
                                            <div class="form-input-item">
-                                               <p class="tender-form-header">০৪। উৎস কর ও মূল্য সংযোজন কর বাধন ইজারা
+                                               <p class="tender-form-header">০৪। উৎস কর ও মূল্য সংযোজন কর বাবদ ইজারা
                                                    মূল্যের ১০% ও ১৫%, মোট=২৫% (শতকরা পঁচিশ ভাগ)</p>
                                                <div class="row">
                                                    <div class="col-md-6">
@@ -415,7 +415,6 @@
 
                                            </div>
                                        </div>
-
 
                                    </div>
                                    <button class="custom-btn" type="submit">Submit Form</button>
