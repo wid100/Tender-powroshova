@@ -134,7 +134,10 @@ class ParticipateController extends Controller
         $participate->b_witness_district = $request->input('b_witness_district');
         // dd($participate);
         $participate->save();
-        return redirect()->route('user.my-tender')->with('success', 'Participant information has been stored successfully');
+        $participateId = $participate->id;
+
+        return redirect()->route('user.print.participate', ['id' => $participateId])->with('success', 'Tender created successfully');
+        // return redirect()->route('user.my-tender')->with('success', 'Participant information has been stored successfully');
     }
     /**
      * Display the specified resource.
@@ -142,9 +145,13 @@ class ParticipateController extends Controller
      * @param  \App\Models\Participate  $participate
      * @return \Illuminate\Http\Response
      */
-    public function show(Participate $participate)
+    public function show($id)
     {
-        //
+        // Fetch the tender data by ID
+        $participate = Participate::findOrFail($id);
+
+        // Pass the tender data to the view
+        return view('user.print.participate')->with('participate', $participate);
     }
 
     /**

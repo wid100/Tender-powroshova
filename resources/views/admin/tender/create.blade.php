@@ -66,20 +66,21 @@
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label for="contact_details" class="form-label">Contact Details</label>
-                                        <textarea class="form-control" name="contact_details" id="easyMdeExample2" rows="5"></textarea>
+                                        <textarea class="form-control" name="contact_details" id="tinymceExample3" rows="5"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label for="description" class="form-label">Description</label>
-                                        <textarea class="form-control" name="description" id="easyMdeExample" rows="5"></textarea>
+                                        {{-- <textarea class="form-control" name="description" id="easyMdeExample" rows="5"></textarea> --}}
+                                        <textarea class="form-control" name="description" id="tinymceExample" rows="10"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label for="condition" class="form-label">Condition</label>
-                                        <textarea class="form-control" name="condition" id="easyMdeExample3" rows="5"></textarea>
+                                        <textarea class="form-control" name="condition" id="tinymceExample2" rows="5"></textarea>
                                     </div>
                                 </div>
 

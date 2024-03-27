@@ -38,7 +38,7 @@
                     Tender Description
                 </h2>
                 <div class="tender-information-content">
-                    {{ $tender->description }}
+                    {!! $tender->description !!}
                 </div>
             </div>
             <div class="tender-information mt-3">
@@ -47,7 +47,7 @@
                     <div class="row">
                         <div class="col-md-6 mb-4">
                             <div class="tender-contact-item">
-                                {{ $tender->contact_details }}
+                                {!! $tender->contact_details !!}
                             </div>
                         </div>
                         {{-- <div class="col-md-6 mb-4">
@@ -70,7 +70,7 @@
                     Tender Condition
                 </h2>
                 <div class="tender-information-content">
-                    {{ $tender->description }}
+                    {!! $tender->condition !!}
                 </div>
             </div>
             <a href="{{ route('user.participate-tender', $tender->id) }}" class="tender-appy-btn custom-btn mt-3">
