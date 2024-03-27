@@ -171,7 +171,7 @@ section.hero-section {
     font-size: 14px;
 }
 .swiper-content-featured-tenders a {
-    background-color: var(--second-color);
+    background-color: var(--main-color);
     text-decoration: none;
     padding: 6px 20px;
     border-radius: 40px;
