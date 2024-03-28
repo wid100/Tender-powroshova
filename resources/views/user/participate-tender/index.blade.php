@@ -62,14 +62,14 @@
                                                <label class="tender-form-header" for="">০১।মহালের নাম
                                                </label>
                                                <input type="text" class="form-control" name="palace_name" id=""
-                                                   value="" name="name" placeholder="মহালের নাম" />
+                                                   value="" name="name" required placeholder="মহালের নাম" />
                                            </div>
                                        </div>
                                        <div class="col-md-6">
                                            <div class="form-input-item">
                                                <label class="tender-form-header" for="">অবস্থান</label>
                                                <input type="text" class="form-control" name="location" id=""
-                                                   value="" name="place" placeholder="অবস্থান" />
+                                                   value="" name="place" required placeholder="অবস্থান" />
                                            </div>
                                        </div>
                                        <div class="col-md-12">
@@ -81,13 +81,13 @@
                                                        <label class="tender-form-header" for="">অংকে
                                                        </label>
                                                        <input type="text" class="form-control" name="lease_price_number"
-                                                           id="" value="" placeholder="অংকে" />
+                                                           id="" value="" required placeholder="অংকে" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="">কথায়
                                                        </label>
                                                        <input type="text" class="form-control" id=""
-                                                           name="lease_price_text" value="" placeholder="কথায়" />
+                                                           name="lease_price_text" required value="" placeholder="কথায়" />
                                                    </div>
                                                </div>
 
@@ -101,31 +101,31 @@
                                                        <label class="tender-form-header" for="">ব্যাংকের
                                                            নাম </label>
                                                        <input type="text" class="form-control" id=""
-                                                           name="bank_name" value="" placeholder="ব্যাংকের নাম" />
+                                                           name="bank_name" required value="" placeholder="ব্যাংকের নাম" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="">ড্রাপট
                                                            নং </label>
                                                        <input type="text" class="form-control" id=""
-                                                           name="draft_no" value="" placeholder="ড্রাপট নং" />
+                                                           name="draft_no" required value="" placeholder="ড্রাপট নং" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="">তারিখ
                                                        </label>
                                                        <input type="date" class="form-control" id=""
-                                                           value="" name="pay_date" placeholder="তারিখ" />
+                                                           value="" name="pay_date" required placeholder="তারিখ" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="">টাকার
                                                            পরিমান </label>
                                                        <input type="text" class="form-control" id=""
-                                                           value="" name="pay_amount" placeholder="টাকার পরিমান" />
+                                                           value="" name="pay_amount" required placeholder="টাকার পরিমান" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="">নথি আপলোড
                                                            করুন</label>
                                                        <input type="file" class="form-control" id=""
-                                                           value="" name="biyna_upload_file"
+                                                           value="" required name="biyna_upload_file"
                                                            placeholder="নথি আপলোড করুন" />
                                                    </div>
                                                </div>
@@ -141,34 +141,34 @@
                                                        <label class="tender-form-header" for="">ব্যাংকের
                                                            নাম </label>
                                                        <input type="text" class="form-control" id=""
-                                                           value="" name="ejara_bank_name"
+                                                           value="" required name="ejara_bank_name"
                                                            placeholder="ব্যাংকের নাম" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="">ড্রাপট
                                                            নং </label>
                                                        <input type="text" class="form-control" id=""
-                                                           value="" name="ejara_draft_no"
+                                                           value="" required name="ejara_draft_no"
                                                            placeholder="ড্রাপট নং" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="">তারিখ
                                                        </label>
                                                        <input type="date" class="form-control" id=""
-                                                           value="" name="ejara_pay_date" placeholder="তারিখ" />
+                                                           value="" required name="ejara_pay_date" placeholder="তারিখ" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="">টাকার
                                                            পরিমান </label>
                                                        <input type="text" class="form-control" id=""
-                                                           value="" name="ejara_pay_amount"
+                                                           value="" required name="ejara_pay_amount"
                                                            placeholder="টাকার পরিমান" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="">নথি আপলোড
                                                            করুন</label>
                                                        <input type="file" class="form-control" id=""
-                                                           value="" name="ejara_upload_file"
+                                                           value="" required name="ejara_upload_file"
                                                            placeholder="নথি আপলোড করুন" />
                                                    </div>
                                                </div>
@@ -196,24 +196,25 @@
                                                            <tr>
                                                                <td>
                                                                    <div class="form-input-field">
-                                                                       <input type="text" name="refundable[name]">
+                                                                       <input type="text" required name="refundable[name]">
                                                                    </div>
                                                                </td>
                                                                <td>
                                                                    <div class="form-input-field">
                                                                        <input type="text"
-                                                                           name="refundable[drapt_name]">
+                                                                          required name="refundable[drapt_name]">
                                                                    </div>
                                                                </td>
                                                                <td>
                                                                    <div class="form-input-field">
-                                                                       <input type="text" name="refundable[amount]">
+                                                                       <input required type="text" name="refundable[amount]">
                                                                    </div>
                                                                </td>
                                                                <td>
 
                                                                    <div class="upload-img custom-btn">
                                                                        <input type="file"
+                                                                       required
                                                                            name="refundable_document_file" />
                                                                        <img src="{{ asset('assets-frontend/images/icons/file.svg') }}"
                                                                            alt="" />
@@ -246,25 +247,25 @@
                                                            <tr>
                                                                <td>
                                                                    <div class="form-input-field">
-                                                                       <input type="text"
+                                                                       <input type="text" required
                                                                            name="schedule_price[bank_name]">
                                                                    </div>
                                                                </td>
                                                                <td>
                                                                    <div class="form-input-field">
-                                                                       <input type="text"
+                                                                       <input type="text" required
                                                                            name="schedule_price[draft_no]">
                                                                    </div>
                                                                </td>
                                                                <td>
                                                                    <div class="form-input-field">
-                                                                       <input type="text"
+                                                                       <input type="text" required
                                                                            name="schedule_price[amount]">
                                                                    </div>
                                                                </td>
                                                                <td>
                                                                    <div class="upload-img custom-btn">
-                                                                       <input type="file"
+                                                                       <input type="file" required
                                                                            name="schedule_price_document_file" />
                                                                        <img src="{{ asset('assets-frontend/images/icons/file.svg') }}"
                                                                            alt="" />
@@ -281,7 +282,7 @@
                                            <div class="form-input-item">
                                                <label class="tender-form-header" for="dor_data_name">০৭। দর দাতার নাম
                                                    :</label>
-                                               <input type="text" class="form-control" id="dor_data_name"
+                                               <input type="text" required class="form-control" id="dor_data_name"
                                                    value="" name="bidder_name" placeholder="দর দাতার নাম" />
                                            </div>
                                        </div>
@@ -289,7 +290,7 @@
                                            <div class="form-input-item">
                                                <label class="tender-form-header" for="mobile">মোবাইল নং-</label>
                                                <input type="number" class="form-control" id="mobile" value=""
-                                                   name="bidder_number" placeholder="মোবাইল নং" />
+                                                   name="bidder_number" required placeholder="মোবাইল নং" />
                                            </div>
                                        </div>
                                        <div class="col-md-6">
@@ -297,7 +298,7 @@
                                                <label class="tender-form-header" for="bidder_father_name">০৮। পিতার নাম
                                                </label>
                                                <input type="text" class="form-control" id="bidder_father_name"
-                                                   value="" name="bidder_father_name" placeholder="পিতার নাম" />
+                                                   value="" required name="bidder_father_name" placeholder="পিতার নাম" />
                                            </div>
                                        </div>
                                        <div class="col-md-6">
@@ -305,7 +306,7 @@
                                                <label class="tender-form-header" for="bidder_mother_name">০৯। মাতার নাম
                                                </label>
                                                <input type="text" class="form-control" id="bidder_mother_name"
-                                                   value="" name="bidder_mother_name" placeholder="মাতার নাম" />
+                                                   value="" required name="bidder_mother_name" placeholder="মাতার নাম" />
                                            </div>
                                        </div>
                                        <div class="col-md-12">
@@ -314,22 +315,22 @@
                                                <div class="row">
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="a_village">গ্রাম</label>
-                                                       <input type="text" class="form-control" id="a_village"
+                                                       <input type="text" required class="form-control" id="a_village"
                                                            name="a_village" placeholder="গ্রাম" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="a_post">ডাকঘর </label>
                                                        <input type="text" class="form-control" id="a_post"
-                                                           value="" name="a_post" placeholder="ডাকঘর" />
+                                                           value="" required name="a_post" placeholder="ডাকঘর" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="a_upazila">উপজেলা </label>
                                                        <input type="text" class="form-control" id="a_upazila"
-                                                           value="" name="a_upazila" placeholder="উপজেলা " />
+                                                           value="" required name="a_upazila" placeholder="উপজেলা " />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="a_district">জেলা </label>
-                                                       <input type="text" class="form-control" id="a_district"
+                                                       <input required type="text" class="form-control" id="a_district"
                                                            value="" name="a_district" placeholder="জেলা " />
                                                    </div>
                                                </div>
@@ -342,22 +343,22 @@
                                                <div class="row">
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="b_village">গ্রাম</label>
-                                                       <input type="text" class="form-control" id="b_village"
+                                                       <input required type="text" class="form-control" id="b_village"
                                                            name="b_village" placeholder="গ্রাম" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="b_post">ডাকঘর </label>
-                                                       <input type="text" class="form-control" id="b_post"
+                                                       <input required type="text" class="form-control" id="b_post"
                                                            value="" name="b_post" placeholder="ডাকঘর" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="b_upazila">উপজেলা </label>
-                                                       <input type="text" class="form-control" id="b_upazila"
+                                                       <input required type="text" class="form-control" id="b_upazila"
                                                            value="" name="b_upazila" placeholder="উপজেলা " />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="b_district">জেলা </label>
-                                                       <input type="text" class="form-control" id="b_district"
+                                                       <input required type="text" class="form-control" id="b_district"
                                                            value="" name="b_district" placeholder="জেলা " />
                                                    </div>
                                                </div>
@@ -372,40 +373,40 @@
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="a_witness_name">
                                                            নাম </label>
-                                                       <input type="text" class="form-control"
+                                                       <input required type="text" class="form-control"
                                                            id="a_witness_name" name="a_witness_name"
                                                            placeholder="নাম" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="a_witness_father_name">পিতার
                                                            নাম </label>
-                                                       <input type="text" class="form-control"
+                                                       <input required type="text" class="form-control"
                                                            id="a_witness_father_name" name="a_witness_father_name"
                                                            placeholder="পিতার নাম" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header"
                                                            for="a_witness_village">গ্রাম</label>
-                                                       <input type="text" class="form-control" id="a_witness_village"
+                                                       <input required type="text" class="form-control" id="a_witness_village"
                                                            name="a_witness_village" placeholder="গ্রাম" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="a_witness_post">ডাকঘর
                                                        </label>
-                                                       <input type="text" class="form-control" id="a_witness_post"
+                                                       <input required type="text" class="form-control" id="a_witness_post"
                                                            value="" name="a_witness_post" placeholder="ডাকঘর" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="a_witness_upazila">উপজেলা
                                                        </label>
-                                                       <input type="text" class="form-control" id="a_witness_upazila"
+                                                       <input required type="text" class="form-control" id="a_witness_upazila"
                                                            value="" name="a_witness_upazila"
                                                            placeholder="উপজেলা " />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="a_witness_district">জেলা
                                                        </label>
-                                                       <input type="text" class="form-control" id="a_witness_district"
+                                                       <input required type="text" class="form-control" id="a_witness_district"
                                                            value="" name="a_witness_district"
                                                            placeholder="জেলা " />
                                                    </div>
@@ -420,40 +421,40 @@
                                                   <div class="col-md-6">
                                                        <label class="tender-form-header" for="b_witness_name">
                                                            নাম </label>
-                                                       <input type="text" class="form-control"
+                                                       <input required type="text" class="form-control"
                                                            id="b_witness_name" name="b_witness_name"
                                                            placeholder="নাম" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="b_witness_father_name">পিতার
                                                            নাম </label>
-                                                       <input type="text" class="form-control"
+                                                       <input required type="text" class="form-control"
                                                            id="b_witness_father_name" name="b_witness_father_name"
                                                            placeholder="পিতার নাম" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header"
                                                            for="b_witness_village">গ্রাম</label>
-                                                       <input type="text" class="form-control" id="b_witness_village"
+                                                       <input required type="text" class="form-control" id="b_witness_village"
                                                            name="b_witness_village" placeholder="গ্রাম" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="b_witness_post">ডাকঘর
                                                        </label>
-                                                       <input type="text" class="form-control" id="b_witness_post"
+                                                       <input required type="text" class="form-control" id="b_witness_post"
                                                            value="" name="b_witness_post" placeholder="ডাকঘর" />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="b_witness_upazila">উপজেলা
                                                        </label>
-                                                       <input type="text" class="form-control" id="b_witness_upazila"
+                                                       <input required type="text" class="form-control" id="b_witness_upazila"
                                                            value="" name="b_witness_upazila"
                                                            placeholder="উপজেলা " />
                                                    </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="b_witness_district">জেলা
                                                        </label>
-                                                       <input type="text" class="form-control" id="b_witness_district"
+                                                       <input required type="text" class="form-control" id="b_witness_district"
                                                            value="" name="b_witness_district"
                                                            placeholder="জেলা " />
                                                    </div>
