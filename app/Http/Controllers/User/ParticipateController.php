@@ -46,7 +46,7 @@ class ParticipateController extends Controller
         // Return the view with the filtered close tenders
         return view('user.close-tender.index', compact('closeTenders'));
     }
-    
+
 
 
     public function AwardTenderList()
@@ -79,6 +79,8 @@ class ParticipateController extends Controller
 
     public function store(Request $request)
     {
+
+
         $participate = new Participate();
         $participate->user_id = Auth::user()->id;
         $participate->tender_id = $request->input('tender_id');
@@ -92,9 +94,27 @@ class ParticipateController extends Controller
         $participate->draft_no = $request->input('draft_no');
         $participate->pay_date = $request->input('pay_date');
         $participate->pay_amount = $request->input('pay_amount');
+
+
+        if ($request->hasFile('biyna_upload_file')) {
+            $file = $request->file('biyna_upload_file');
+            $fileName = $file->getClientOriginalName();
+            $file->move(public_path('uploads'), $fileName);
+            $participate->biyna_upload_file = $fileName; // Save file name to database
+        }
+
+
         $participate->ejara_bank_name = $request->input('ejara_bank_name');
         $participate->ejara_draft_no = $request->input('ejara_draft_no');
         $participate->ejara_pay_date = $request->input('ejara_pay_date');
+
+        if ($request->hasFile('ejara_upload_file')) {
+            $file = $request->file('ejara_upload_file');
+            $fileName = $file->getClientOriginalName();
+            $file->move(public_path('uploads'), $fileName);
+            $participate->ejara_upload_file = $fileName; // Save file name to database
+        }
+
         $participate->ejara_pay_amount = $request->input('ejara_pay_amount');
 
         // Save contact information
@@ -102,6 +122,23 @@ class ParticipateController extends Controller
         // $participate->schedule_price = $request->input('schedule_price');
         $participate->refundable = json_encode($request->input('refundable'));
         $participate->schedule_price = json_encode($request->input('schedule_price'));
+
+        if ($request->hasFile('refundable_document_file')) {
+            $file = $request->file('refundable_document_file');
+            $fileName = $file->getClientOriginalName();
+            $file->move(public_path('uploads'), $fileName);
+            $participate->refundable_document_file = $fileName; // Save file name to database
+        }
+
+        if ($request->hasFile('schedule_price_document_file')) {
+            $file = $request->file('schedule_price_document_file');
+            $fileName = $file->getClientOriginalName();
+            $file->move(public_path('uploads'), $fileName);
+            $participate->schedule_price_document_file = $fileName; // Save file name to database
+        }
+
+
+
 
 
         $participate->bidder_name = $request->input('bidder_name');
@@ -120,6 +157,7 @@ class ParticipateController extends Controller
         $participate->b_district = $request->input('b_district');
 
 
+        $participate->a_witness_name = $request->input('a_witness_name');
         $participate->a_witness_father_name = $request->input('a_witness_father_name');
         $participate->a_witness_village = $request->input('a_witness_village');
         $participate->a_witness_post = $request->input('a_witness_post');
@@ -127,6 +165,7 @@ class ParticipateController extends Controller
         $participate->a_witness_district = $request->input('a_witness_district');
 
 
+        $participate->b_witness_name = $request->input('b_witness_name');
         $participate->b_witness_father_name = $request->input('b_witness_father_name');
         $participate->b_witness_village = $request->input('b_witness_village');
         $participate->b_witness_post = $request->input('b_witness_post');

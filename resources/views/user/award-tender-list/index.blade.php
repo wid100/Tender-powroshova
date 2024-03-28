@@ -13,10 +13,10 @@
                                <th scope="col">Tender Title</th>
                                <th scope="col">Potential government value</th>
                                <th scope="col">Schedule price</th>
-                               <th scope="col">Publish Date</th>
                                <th scope="col">Last Submission Date</th>
-                               <th scope="col">Submission date</th>
-                               <th scope="col">Status</th>
+                               <th scope="col">Tender Opening Date</th>
+                               {{-- <th scope="col">Submission date</th>
+                               <th scope="col">Status</th> --}}
 
                            </tr>
                        </thead>
@@ -35,7 +35,7 @@
                                    <td>{{ $tender->tender->shedeul_price }}</td>
                                    <td>{{ $tender->tender->start_date }}</td>
                                    <td>{{ $tender->tender->end_date }}</td>
-                                   <td>{{ $tender->created_at->format('d-m-Y') }}</td>
+                                   {{-- <td>{{ $tender->created_at->format('d-m-Y') }}</td>
 
                                    <td>
                                        @if ($tender->status == 0)
@@ -45,7 +45,7 @@
                                        @else
                                            <span class="badge btn-danger">Cancle</span>
                                        @endif
-                                   </td>
+                                   </td> --}}
                                </tr>
                            @endforeach
                        </tbody>

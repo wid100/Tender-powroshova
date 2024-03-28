@@ -195,7 +195,9 @@ section.hero-section {
     padding: 20px 0 30px 0;
     font-size: 12px;
 }
-
+.live-tender-wrapper {
+    min-height: 70vh;
+}
 /* ================================================== */
 /*============= Media query css =====================*/
 

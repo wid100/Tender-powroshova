@@ -121,6 +121,13 @@
                                                        <input type="text" class="form-control" id=""
                                                            value="" name="pay_amount" placeholder="টাকার পরিমান" />
                                                    </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="">নথি আপলোড
+                                                           করুন</label>
+                                                       <input type="file" class="form-control" id=""
+                                                           value="" name="biyna_upload_file"
+                                                           placeholder="নথি আপলোড করুন" />
+                                                   </div>
                                                </div>
 
                                            </div>
@@ -157,6 +164,13 @@
                                                            value="" name="ejara_pay_amount"
                                                            placeholder="টাকার পরিমান" />
                                                    </div>
+                                                   <div class="col-md-6">
+                                                       <label class="tender-form-header" for="">নথি আপলোড
+                                                           করুন</label>
+                                                       <input type="file" class="form-control" id=""
+                                                           value="" name="ejara_upload_file"
+                                                           placeholder="নথি আপলোড করুন" />
+                                                   </div>
                                                </div>
 
                                            </div>
@@ -174,6 +188,7 @@
                                                                    নাম</th>
                                                                <th scope="col">সিডিআর / ড্রাপট নং</th>
                                                                <th scope="col">টাকা</th>
+                                                               <th scope="col">নথি আপলোড করুন</th>
 
                                                            </tr>
                                                        </thead>
@@ -193,6 +208,15 @@
                                                                <td>
                                                                    <div class="form-input-field">
                                                                        <input type="text" name="refundable[amount]">
+                                                                   </div>
+                                                               </td>
+                                                               <td>
+
+                                                                   <div class="upload-img custom-btn">
+                                                                       <input type="file"
+                                                                           name="refundable_document_file" />
+                                                                       <img src="{{ asset('assets-frontend/images/icons/file.svg') }}"
+                                                                           alt="" />
                                                                    </div>
                                                                </td>
 
@@ -215,7 +239,7 @@
                                                                    নাম</th>
                                                                <th scope="col">সিডিআর / ড্রাপট নং</th>
                                                                <th scope="col">টাকা</th>
-
+                                                               <th scope="col">নথি আপলোড করুন</th>
                                                            </tr>
                                                        </thead>
                                                        <tbody class="tender-table-body">
@@ -236,6 +260,14 @@
                                                                    <div class="form-input-field">
                                                                        <input type="text"
                                                                            name="schedule_price[amount]">
+                                                                   </div>
+                                                               </td>
+                                                               <td>
+                                                                   <div class="upload-img custom-btn">
+                                                                       <input type="file"
+                                                                           name="schedule_price_document_file" />
+                                                                       <img src="{{ asset('assets-frontend/images/icons/file.svg') }}"
+                                                                           alt="" />
                                                                    </div>
                                                                </td>
 
@@ -338,6 +370,13 @@
                                                <p class="tender-form-header">১১। স্বাক্ষীর নাম (১)</p>
                                                <div class="row">
                                                    <div class="col-md-6">
+                                                       <label class="tender-form-header" for="a_witness_name">
+                                                           নাম </label>
+                                                       <input type="text" class="form-control"
+                                                           id="a_witness_name" name="a_witness_name"
+                                                           placeholder="নাম" />
+                                                   </div>
+                                                   <div class="col-md-6">
                                                        <label class="tender-form-header" for="a_witness_father_name">পিতার
                                                            নাম </label>
                                                        <input type="text" class="form-control"
@@ -378,6 +417,13 @@
                                            <div class="form-input-item">
                                                <p class="tender-form-header">স্বাক্ষীর নাম (2)</p>
                                                <div class="row">
+                                                  <div class="col-md-6">
+                                                       <label class="tender-form-header" for="b_witness_name">
+                                                           নাম </label>
+                                                       <input type="text" class="form-control"
+                                                           id="b_witness_name" name="b_witness_name"
+                                                           placeholder="নাম" />
+                                                   </div>
                                                    <div class="col-md-6">
                                                        <label class="tender-form-header" for="b_witness_father_name">পিতার
                                                            নাম </label>

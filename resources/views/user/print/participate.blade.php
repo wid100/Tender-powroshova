@@ -369,10 +369,10 @@
                                                             <div style="display: flex;">
                                                                 <span>১১। স্বাক্ষীর নামঃ (১)</span>
                                                                 <span
-                                                                    style="border-bottom: 1px dotted #000;flex-grow: 1; min-width: 350px;padding-left: 5px;"></span>
+                                                                    style="border-bottom: 1px dotted #000;flex-grow: 1; min-width: 350px;padding-left: 5px;">{{ $participate->a_witness_name }}</span>
                                                                 <span>(২)</span>
                                                                 <span
-                                                                    style="border-bottom: 1px dotted #000;flex-grow: 1; min-width: 200px;padding-left: 5px;"></span>
+                                                                    style="border-bottom: 1px dotted #000;flex-grow: 1; min-width: 200px;padding-left: 5px;">{{ $participate->b_witness_name }}</span>
                                                             </div>
                                                             <div style="display: flex; padding:15px 0 0 45px;">
                                                                 <span>পিতার নামঃ</span>

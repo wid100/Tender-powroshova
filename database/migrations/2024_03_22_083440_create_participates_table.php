@@ -27,18 +27,22 @@ return new class extends Migration
             $table->string('draft_no')->nullable();
             $table->date('pay_date')->nullable();
             $table->string('pay_amount')->nullable();
+            $table->string('biyna_upload_file')->nullable();
 
 
             $table->string('ejara_bank_name')->nullable();
             $table->string('ejara_draft_no')->nullable();
             $table->date('ejara_pay_date')->nullable();
             $table->string('ejara_pay_amount')->nullable();
+            $table->string('ejara_upload_file')->nullable();
 
 
 
             $table->json('refundable')->nullable();
             $table->json('schedule_price')->nullable();
-
+            
+            $table->string('refundable_document_file')->nullable();
+            $table->string('schedule_price_document_file')->nullable();
 
             $table->string('bidder_name')->nullable();
             $table->string('bidder_number')->nullable();
@@ -59,12 +63,15 @@ return new class extends Migration
             $table->string('b_district')->nullable();
 
 
+            $table->string('a_witness_name')->nullable();
             $table->string('a_witness_father_name')->nullable();
             $table->string('a_witness_village')->nullable();
             $table->string('a_witness_post')->nullable();
             $table->string('a_witness_upazila')->nullable();
             $table->string('a_witness_district')->nullable();
 
+
+            $table->string('b_witness_name')->nullable();
             $table->string('b_witness_father_name')->nullable();
             $table->string('b_witness_village')->nullable();
             $table->string('b_witness_post')->nullable();

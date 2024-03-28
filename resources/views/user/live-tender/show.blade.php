@@ -22,10 +22,11 @@
                             <td class="bg-white">{{ $tender->shedeul_price }}</td>
 
                         </tr>
+                          
                         <tr>
-                            <td>Opening Date</td>
-                            <td class="bg-white">{{ $tender->start_date }}</td>
                             <td>Last Submission Date</td>
+                            <td class="bg-white">{{ $tender->start_date }}</td>
+                            <td>Tender Opening Date</td>
                             <td class="bg-white">{{ $tender->end_date }}</td>
 
                         </tr>
