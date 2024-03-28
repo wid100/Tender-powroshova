@@ -116,7 +116,7 @@
                                                             <div
                                                                 style="display: flex;flex-direction: column;align-items: flex-end; padding: 10px 10px 0 0;">
                                                                 <div style="display: flex;margin-top: 10px;">
-                                                                    <span>ড্রাফট নংঃ</span>
+                                                                    <span>সিডিআর/ড্রাফট নং</span>
                                                                     <span
                                                                         style="border-bottom: 1px dotted #000;flex-grow: 1; min-width: 345px;padding-left: 5px;">{{ $participate->draft_no }}</span>
                                                                     <span>তারিখঃ</span>
@@ -139,7 +139,7 @@
                                                             <p>
                                                             <div>
                                                                 <span>০৪। উৎস কর ও মূল্য সংযোজন কর বাবদ ইজারা মূল্যের
-                                                                    ১০% ও ১৫%, মত=২৫% (শতকরা পঁচিশ ভাগ)</span>
+                                                                    ১০% ও ১৫%,মোট=২৫% (শতকরা পঁচিশ ভাগ)</span>
                                                             </div>
                                                             <div
                                                                 style="display: flex;flex-direction: column;align-items: flex-end; padding: 10px 10px 0 0;">
@@ -149,7 +149,7 @@
                                                                         style="border-bottom: 1px dotted #000;flex-grow: 1; min-width: 575px;padding-left: 5px;">{{ $participate->ejara_bank_name }}</span>
                                                                 </div>
                                                                 <div style="display: flex;margin-top: 10px;">
-                                                                    <span>ড্রাফট নংঃ</span>
+                                                                    <span>সিডিআর/ড্রাফট নং</span>
                                                                     <span
                                                                         style="border-bottom: 1px dotted #000;flex-grow: 1; min-width: 350px;padding-left: 5px;">{{ $participate->ejara_draft_no }}</span>
                                                                     <span>তারিখঃ</span>

@@ -104,8 +104,7 @@
                                                            name="bank_name" required value="" placeholder="ব্যাংকের নাম" />
                                                    </div>
                                                    <div class="col-md-6">
-                                                       <label class="tender-form-header" for="">ড্রাপট
-                                                           নং </label>
+                                                       <label class="tender-form-header" for="">সিডিআর / ড্রাপট নং</label>
                                                        <input type="text" class="form-control" id=""
                                                            name="draft_no" required value="" placeholder="ড্রাপট নং" />
                                                    </div>
@@ -145,8 +144,7 @@
                                                            placeholder="ব্যাংকের নাম" />
                                                    </div>
                                                    <div class="col-md-6">
-                                                       <label class="tender-form-header" for="">ড্রাপট
-                                                           নং </label>
+                                                       <label class="tender-form-header" for="">সিডিআর / ড্রাপট নং</label>
                                                        <input type="text" class="form-control" id=""
                                                            value="" required name="ejara_draft_no"
                                                            placeholder="ড্রাপট নং" />
