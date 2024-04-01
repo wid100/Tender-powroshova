@@ -25,43 +25,48 @@ Auth::routes();
 
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::namespace('App\Http\Controllers')->group(function () {
-    Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {
-        Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+Route::
+        namespace('App\Http\Controllers')->group(function () {
+            Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {
+                Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
-        Route::resource('tender', 'TenderController');
-        Route::resource('participate', 'ParticipateController');
-    });
-});
+                Route::resource('tender', 'TenderController');
+                Route::resource('participate', 'ParticipateController');
+
+
+                Route::get('/tender/{id}/participants', [TenderController::class, 'showParticipants'])->name('tender.showParticipants');
+            });
+        });
 
 // ================================user AND ROUTE=============
-Route::namespace('App\Http\Controllers')->group(
-    function () {
-        Route::group(['as' => 'user.', 'prefix' => 'user', 'namespace' => 'User', 'middleware' => ['auth', 'user']], function () {
-            Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
-            Route::get('/user-mangement', [UserSupplierController::class, 'index'])->name('user-mangement');
-            Route::get('/live-tender', [UserDashboardController::class, 'liveTender'])->name('live-tender');
-            Route::get('/latest-tender', [UserDashboardController::class, 'latestTender'])->name('latest-tender');
-            Route::get('/live-tender/{id}', [UserDashboardController::class, 'liveTenderId'])->name('live-tender.show');
-            Route::get('/participate-tender/{id}', [UserDashboardController::class, 'ParticipateTender'])->name('participate-tender');
+Route::
+        namespace('App\Http\Controllers')->group(
+        function () {
+            Route::group(['as' => 'user.', 'prefix' => 'user', 'namespace' => 'User', 'middleware' => ['auth', 'user']], function () {
+                Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
+                Route::get('/user-mangement', [UserSupplierController::class, 'index'])->name('user-mangement');
+                Route::get('/live-tender', [UserDashboardController::class, 'liveTender'])->name('live-tender');
+                Route::get('/latest-tender', [UserDashboardController::class, 'latestTender'])->name('latest-tender');
+                Route::get('/live-tender/{id}', [UserDashboardController::class, 'liveTenderId'])->name('live-tender.show');
+                Route::get('/participate-tender/{id}', [UserDashboardController::class, 'ParticipateTender'])->name('participate-tender');
 
-            Route::get('/my-tender', [ParticipateController::class, 'index'])->name('my-tender');
-            Route::get('/award-tender', [ParticipateController::class, 'AwardTenderList'])->name('award-tender');
-            Route::get('/close-tender', [ParticipateController::class, 'CloseTender'])->name('close-tender');
+                Route::get('/my-tender', [ParticipateController::class, 'index'])->name('my-tender');
+                Route::get('/award-tender', [ParticipateController::class, 'AwardTenderList'])->name('award-tender');
+                Route::get('/close-tender', [ParticipateController::class, 'CloseTender'])->name('close-tender');
 
 
 
 
-            Route::get('/change-password', [UserDashboardController::class, 'showChangePasswordForm'])->name('change-password');
-            Route::post('/change-password', [UserDashboardController::class, 'changePassword'])->name('change-password.post');
-            Route::get('/print/tender/{id}', 'ParticipateController@show')->name('print.participate');
+                Route::get('/change-password', [UserDashboardController::class, 'showChangePasswordForm'])->name('change-password');
+                Route::post('/change-password', [UserDashboardController::class, 'changePassword'])->name('change-password.post');
+                Route::get('/print/tender/{id}', 'ParticipateController@show')->name('print.participate');
 
-            Route::resource('supplier', 'SupplierController');
-            Route::get('/user/supplier', 'SupplierController@show');
-            Route::resource('participate', 'ParticipateController');
-        });
-    }
-);
+                Route::resource('supplier', 'SupplierController');
+                Route::get('/user/supplier', 'SupplierController@show');
+                Route::resource('participate', 'ParticipateController');
+            });
+        }
+    );
 // ================================user AND ROUTE END=============
 
 

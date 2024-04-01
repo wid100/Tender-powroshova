@@ -112,7 +112,7 @@ class ParticipateController extends Controller
             $file = $request->file('ejara_upload_file');
             $fileName = $file->getClientOriginalName();
             $file->move(public_path('uploads'), $fileName);
-            $participate->ejara_upload_file = $fileName; // Save file name to database
+            $participate->ejara_upload_file = $fileName; 
         }
 
         $participate->ejara_pay_amount = $request->input('ejara_pay_amount');

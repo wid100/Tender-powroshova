@@ -16,7 +16,7 @@
             <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h6 class="card-title">Cards Table</h6>
+                        <h6 class="card-title">Participate Table</h6>
 
                         <div class="table-responsive">
                             <table id="dataTableExample" class="table">
@@ -45,18 +45,21 @@
                                             <td>{{ $participate->location }}</td>
                                             <td>{{ $participate->lease_price_number }}</td>
                                             <td>{{ $participate->bank_name }}</td>
-                                            <td>{{ $participate->created_at }}</td>
+                                             <td>{{ $participate->created_at->format('d-M-Y') }}</td>
                                             <td>
                                                 @if ($participate->status == 1)
                                                     <span class="badge bg-success">Active</span>
-                                                @else
-                                                    <span class="badge bg-danger">Pending</span>
+                                                @elseif ($participate->status == 0)
+                                                    <span class="badge bg-warning">Pending</span>
+                                                @elseif ($participate->status == 3)
+                                                    <span class="badge bg-danger">Cancelled</span>
                                                 @endif
                                             </td>
                                             <td>
-                                                <a href="{{ route('admin.participate.edit', $participate->id) }}"
+                                                <a href="{{ route('admin.participate.show', $participate->id) }}"
                                                     class="btn btn-primary btn-icon">
-                                                    <i data-feather="edit"></i></a>
+                                                    <i data-feather="eye"></i>
+                                                </a>
 
                                                 @if (Auth::user()->role_id == 1)
                                                     <form id="delete_form_{{ $participate->id }}"
@@ -70,6 +73,7 @@
                                                         </button>
                                                     </form>
                                                 @endif
+                                            </td>
 
                                         </tr>
                                     @endforeach

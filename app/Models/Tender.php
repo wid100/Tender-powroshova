@@ -13,4 +13,8 @@ class Tender extends Model
     {
         return $this->hasMany(Participate::class);
     }
+    public function participants()
+    {
+        return $this->hasMany(Participate::class, 'tender_ref_id', 'id');
+    }
 }
