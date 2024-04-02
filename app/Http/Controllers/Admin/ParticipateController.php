@@ -19,13 +19,13 @@ class ParticipateController extends Controller
         // $participates = Participate::all();
         return view('admin.participate.index', compact('participates'));
     }
-
-    // public function draft()
-    // {
-    //     // Fetch participations with status 3 (draft)
-    //     $draftParticipates = Participate::where('status', 3)->get();
-    //     return view('admin.participate.draft', compact('draftParticipates'));
-    // }
+    
+    public function draft()
+    {
+        // Fetch participations with status 3 (draft)
+        $draftParticipates = Participate::where('status', 3)->get();
+        return view('admin.draft_participate.index', compact('draftParticipates'));
+    }
 
     /**
      * Show the form for creating a new resource.

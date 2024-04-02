@@ -28,7 +28,7 @@
                         <a href="{{ route('admin.participate.index') }}" class="nav-link">Participate</a>
                     </li>
                     {{-- <li class="nav-item">
-                        <a href="{{route('admin.participate.draft')}}" class="nav-link">Draft Participate</a>
+                      <a href="{{ route('admin.participate.draft') }}" class="nav-link">Draft Participate</a>
                     </li> --}}
 
                 </ul>

@@ -146,17 +146,14 @@
                                                         <p>{{ $tender->tender_id }}</p>
                                                     </div>
                                                     <div class="col-6">
-                                                        <span>Opening Date:</span>
+                                                        <span>Tender Opening Date:</span>
                                                         <p>{{ $tender->start_date }}</p>
                                                     </div>
                                                     <div class="col-6">
                                                         <span>Last Submission:</span>
                                                         <p>{{ $tender->end_date }}</p>
                                                     </div>
-                                                    <div class="col-6">
-                                                        <span>Closing Date:</span>
-                                                        <p>{{ $tender->end_date }}</p>
-                                                    </div>
+                                                    
                                                 </div>
                                                 <a href="{{ route('user.live-tender.show', ['id' => $tender->id]) }}">read
                                                     more</a>
