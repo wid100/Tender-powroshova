@@ -19610,6 +19610,7 @@ body {
   font-size: 25px;
   color: #000865;
   direction: ltr/*rtl:ignore*/;
+      width: 100%;
 }
 .sidebar .sidebar-header .sidebar-brand span {
   color: #6571ff;

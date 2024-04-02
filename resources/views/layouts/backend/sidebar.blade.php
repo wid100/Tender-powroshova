@@ -1,7 +1,7 @@
 <nav class="sidebar">
     <div class="sidebar-header">
         <a href="#" class="sidebar-brand">
-            Noble<span>UI</span>
+           <img src="{{asset('assets/images/logo.png')}}" class="w-75" alt="">
         </a>
         <div class="sidebar-toggler not-active">
             <span></span>
