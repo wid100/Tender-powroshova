@@ -35,6 +35,7 @@ Route::
 
 
                 Route::get('/tender/{id}/participants', [TenderController::class, 'showParticipants'])->name('tender.showParticipants');
+                Route::get('/participate/draft', [ParticipateController::class, 'draft'])->name('participate.draft');
             });
         });
 

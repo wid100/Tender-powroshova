@@ -52,9 +52,10 @@
                                                 @endif
                                             </td>
                                             <td>
-                                                <a href="{{ route('admin.participate.edit', $participate->id) }}"
+                                                 <a href="{{ route('admin.participate.show', $participate->id) }}"
                                                     class="btn btn-primary btn-icon">
-                                                    {{-- <i data-feather="show"></i></a> --}}
+                                                    <i data-feather="eye"></i>
+                                                </a>
 
                                                 @if (Auth::user()->role_id == 1)
                                                     <form id="delete_form_{{ $participate->id }}"

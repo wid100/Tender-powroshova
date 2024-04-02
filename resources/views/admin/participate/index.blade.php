@@ -61,18 +61,7 @@
                                                     <i data-feather="eye"></i>
                                                 </a>
 
-                                                @if (Auth::user()->role_id == 1)
-                                                    <form id="delete_form_{{ $participate->id }}"
-                                                        action="{{ route('admin.participate.destroy', $participate->id) }}"
-                                                        method="post" class="d-inline">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="button" class="btn btn-danger btn-icon delete-button"
-                                                            onclick="deleteId({{ $participate->id }})">
-                                                            <i data-feather="trash"></i>
-                                                        </button>
-                                                    </form>
-                                                @endif
+                                               
                                             </td>
 
                                         </tr>

@@ -72,7 +72,11 @@
                                     </tr>
                                     <tr>
                                         <td>নথি আপলোড করুন:</td>
-                                        <td>{{ $participate->biyna_upload_file }}</td>
+                                        <td>
+                                            <a href="{{ asset('uploads/' . $participate->biyna_upload_file) }}" download>
+                                                {{ $participate->biyna_upload_file }}
+                                            </a>
+                                        </td>
                                     </tr>
                                     <tr class="section-heading">
                                         <td colspan="2">
@@ -96,12 +100,229 @@
                                         <td>টাকার পরিমান :</td>
                                         <td>{{ $participate->ejara_pay_amount }}</td>
                                     </tr>
-                                      <tr>
+
+                                    <tr>
                                         <td>নথি আপলোড করুন:</td>
-                                        <td>{{ $participate->ejara_upload_file }}</td>
+                                        <td>
+                                            <a href="{{ asset('uploads/' . $participate->ejara_upload_file) }}" download>
+                                                {{ $participate->ejara_upload_file }}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="section-heading">
+                                        <td colspan="2">
+                                            <p>০৫। বায়নার উপর ৫% (শতকরা পাঁচ ভাগ) ফেরত যোগ্য</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>ব্যাংকের নাম :</td>
+                                        <td>
+                                            @if ($participate->refundable)
+                                                <?php $refundableData = json_decode($participate->refundable); ?>
+                                                {{ $refundableData->name ?? 'N/A' }}
+                                            @else
+                                                N/A
+                                            @endif
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>সিডিআর / ড্রাপট নং :</td>
+                                        <td>
+                                            @if ($participate->refundable)
+                                                <?php $refundableData = json_decode($participate->refundable); ?>
+                                                {{ $refundableData->drapt_name ?? 'N/A' }}
+                                            @else
+                                                N/A
+                                            @endif
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>টাকার পরিমান :</td>
+                                        <td>
+                                            @if ($participate->refundable)
+                                                <?php $refundableData = json_decode($participate->refundable); ?>
+                                                {{ $refundableData->amount ?? 'N/A' }}
+                                            @else
+                                                N/A
+                                            @endif
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>নথি আপলোড করুন:</td>
+                                        <td>
+                                            <a href="{{ asset('uploads/' . $participate->refundable_document_file) }}"
+                                                download>
+                                                {{ $participate->refundable_document_file }}
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="section-heading">
+                                        <td colspan="2">
+                                            <p>০৬। সিডিউল মূল্য (অফেরতযোগ্য)</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>ব্যাংকের নাম :</td>
+                                        <td>
+                                            @if ($participate->schedule_price)
+                                                <?php $schedule_priceData = json_decode($participate->schedule_price); ?>
+                                                {{ $schedule_priceData->name ?? 'N/A' }}
+                                            @else
+                                                N/A
+                                            @endif
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>সিডিআর / ড্রাপট নং :</td>
+                                        <td>
+                                            @if ($participate->schedule_price)
+                                                <?php $schedule_priceData = json_decode($participate->schedule_price); ?>
+                                                {{ $schedule_priceData->drapt_name ?? 'N/A' }}
+                                            @else
+                                                N/A
+                                            @endif
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>টাকার পরিমান :</td>
+                                        <td>
+                                            @if ($participate->schedule_price)
+                                                <?php $schedule_priceData = json_decode($participate->schedule_price); ?>
+                                                {{ $schedule_priceData->amount ?? 'N/A' }}
+                                            @else
+                                                N/A
+                                            @endif
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>নথি আপলোড করুন:</td>
+                                        <td>
+                                            <a href="{{ asset('uploads/' . $participate->refundable_document_file) }}"
+                                                download>
+                                                {{ $participate->refundable_document_file }}
+                                            </a>
+                                        </td>
                                     </tr>
 
 
+                                    <tr>
+                                        <td>০৭। দর দাতার নাম :</td>
+                                        <td>{{ $participate->bidder_name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>মোবাইল নং-</td>
+                                        <td>{{ $participate->bidder_number }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>০৮। পিতার নাম</td>
+                                        <td>{{ $participate->bidder_father_name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>০৯। মাতার নাম</td>
+                                        <td>{{ $participate->bidder_mother_name }}</td>
+                                    </tr>
+                                    <tr class="section-heading">
+                                        <td colspan="2">
+                                            <p>১০। (ক) বর্তমান ঠিকানা</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>গ্রাম</td>
+                                        <td>{{ $participate->a_village }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ডাকঘর</td>
+                                        <td>{{ $participate->a_post }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>উপজেলা</td>
+                                        <td>{{ $participate->a_upazila }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>জেলা</td>
+                                        <td>{{ $participate->a_district }}</td>
+                                    </tr>
+
+                                    <tr class="section-heading">
+                                        <td colspan="2">
+                                            <p>(খ) স্থায়ী ঠিকানা</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>গ্রাম</td>
+                                        <td>{{ $participate->b_village }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ডাকঘর</td>
+                                        <td>{{ $participate->b_post }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>উপজেলা</td>
+                                        <td>{{ $participate->b_upazila }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>জেলা</td>
+                                        <td>{{ $participate->b_district }}</td>
+                                    </tr>
+                                    <tr class="section-heading">
+                                        <td colspan="2">
+                                            <p>১১। স্বাক্ষীর নাম (১)</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>নাম</td>
+                                        <td>{{ $participate->a_witness_name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>পিতার নাম</td>
+                                        <td>{{ $participate->a_witness_father_name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>গ্রাম</td>
+                                        <td>{{ $participate->a_witness_village }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ডাকঘর</td>
+                                        <td>{{ $participate->a_witness_post }}</td>
+                                    </tr>
+                                     <tr>
+                                        <td>উপজেলা</td>
+                                        <td>{{ $participate->a_witness_upazila }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>জেলা</td>
+                                        <td>{{ $participate->a_witness_district }}</td>
+                                    </tr>
+                                    <tr class="section-heading">
+                                        <td colspan="2">
+                                            <p>স্বাক্ষীর নাম (2)</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>নাম</td>
+                                        <td>{{ $participate->b_witness_name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>পিতার নাম</td>
+                                        <td>{{ $participate->b_witness_father_name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>গ্রাম</td>
+                                        <td>{{ $participate->b_witness_village }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ডাকঘর</td>
+                                        <td>{{ $participate->b_witness_post }}</td>
+                                    </tr>
+                                     <tr>
+                                        <td>উপজেলা</td>
+                                        <td>{{ $participate->b_witness_upazila }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>জেলা</td>
+                                        <td>{{ $participate->b_witness_district }}</td>
+                                    </tr>
 
                                     <tr>
                                         <td>Status :</td>
