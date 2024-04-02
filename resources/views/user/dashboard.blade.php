@@ -48,7 +48,7 @@
                                    <p>TENDER LATEST</p>
                                </div>
                                <div class="sd-box-values">
-                                    <p>{{ $tenderCount }}</p>
+                                   <p>{{ $tenderCount }}</p>
                                </div>
                            </a>
                        </div>
@@ -63,7 +63,7 @@
                                    <p>AWARD TENDER</p>
                                </div>
                                <div class="sd-box-values">
-                                    <p>{{ $awardedTenderCount }}</p>
+                                   <p>{{ $awardedTenderCount }}</p>
                                </div>
                            </a>
                        </div>
@@ -146,16 +146,16 @@
                                                                        <p>{{ $tender->tender_id }}</p>
                                                                    </div>
                                                                    <div class="col-6">
-                                                                       <span>Opening Date:</span>
-                                                                       <p>{{ $tender->start_date }}</p>
+                                                                       <span>Tender Opening Date:</span>
+                                                                       <p>{{ $tender->end_date }}</p>
                                                                    </div>
-                                                                   <div class="col-6">
+                                                                   {{-- <div class="col-6">
                                                                        <span>Last Submission:</span>
                                                                        <p>{{ $tender->end_date }}</p>
-                                                                   </div>
+                                                                   </div> --}}
                                                                    <div class="col-6">
-                                                                       <span>Closing Date:</span>
-                                                                       <p>{{ $tender->end_date }}</p>
+                                                                       <span>Last Submission Date:</span>
+                                                                       <p>{{ $tender->start_date }}</p>
                                                                    </div>
                                                                </div>
                                                                <a
