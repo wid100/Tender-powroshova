@@ -15,9 +15,17 @@ class ParticipateController extends Controller
      */
     public function index()
     {
-        $participates = Participate::all();
+        $participates = Participate::where('status', '!=', 3)->get();
+        // $participates = Participate::all();
         return view('admin.participate.index', compact('participates'));
     }
+
+    // public function draft()
+    // {
+    //     // Fetch participations with status 3 (draft)
+    //     $draftParticipates = Participate::where('status', 3)->get();
+    //     return view('admin.participate.draft', compact('draftParticipates'));
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -48,9 +56,10 @@ class ParticipateController extends Controller
      */
     public function show($id)
     {
-        //
+        $participate = Participate::findOrFail($id);
+        // dd($participate); // Dump and die to see the structure of $participate
+        return view('admin.participate.show', compact('participate'));
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -71,7 +80,19 @@ class ParticipateController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $participate = Participate::findOrFail($id);
+
+        // Validate the request data
+        $validatedData = $request->validate([
+            'status' => 'required|in:1,2,3', // Ensure status is one of the specified values
+        ]);
+
+        // Update the status
+        $participate->status = $validatedData['status'];
+        $participate->save();
+
+        // Redirect to the index page with a success message
+        return redirect()->route('admin.participate.index')->with('success', 'Status updated successfully');
     }
 
     /**

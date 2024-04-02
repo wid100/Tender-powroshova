@@ -20,23 +20,18 @@
             </li>
             <li class="nav-item nav-category">web apps</li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" href="#tender" role="button" aria-expanded="false"
-                    aria-controls="tender">
-                    <i class="link-icon" data-feather="box"></i>
-                    <span class="link-title">Tenders</span>
-                    <i class="link-arrow" data-feather="chevron-down"></i>
-                </a>
-                <div class="collapse" id="tender">
-                    <ul class="nav sub-menu">
-                        <li class="nav-item">
-                            <a href="{{ route('admin.tender.index') }}" class="nav-link">Tender</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('admin.participate.index') }}" class="nav-link">Participate</a>
-                        </li>
+                <ul class="nav sub-menu">
+                    <li class="nav-item">
+                        <a href="{{ route('admin.tender.index') }}" class="nav-link">Tender</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('admin.participate.index') }}" class="nav-link">Participate</a>
+                    </li>
+                    {{-- <li class="nav-item">
+                        <a href="{{route('admin.participate.draft')}}" class="nav-link">Draft Participate</a>
+                    </li> --}}
 
-                    </ul>
-                </div>
+                </ul>
             </li>
 
         </ul>

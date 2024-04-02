@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Str;
 use App\Models\Tender;
+use App\Models\Participate;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -20,6 +21,14 @@ class TenderController extends Controller
         $tenders = Tender::get();
         return view('admin.tender.index', compact('tenders'));
     }
+    public function showParticipants($id)
+    {
+        $tender = Tender::with('participants')->find($id);
+        $participant = Participate::where('tender_id', $id)->get();
+
+        return view('admin.participate_sorting.index', compact('participant', 'tender'));
+    }
+
 
     /**
      * Show the form for creating a new resource.

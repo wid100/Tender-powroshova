@@ -4,12 +4,7 @@
     <div class="page-content">
 
         <nav class="page-breadcrumb d-flex justify-content-between align-items-center">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Packages</a></li>
-                <li class="breadcrumb-item active" aria-current="page">All Packages</li>
-            </ol>
-            <a href="{{ route('admin.tender.create') }}" class="btn btn-primary active" role="button"
-                aria-pressed="true">Create Package</a>
+            <h2> Tender Name: {{ $tender->name }}</h2>
 
         </nav>
 
@@ -26,57 +21,58 @@
                                         <th>ID</th>
                                         <th>Tender Id</th>
                                         <th>Name</th>
-                                        <th>Gov Price</th>
-                                        <th>Shedeul Price</th>
-                                        <th>Start Date</th>
-                                        <th>End Date</th>
+                                        <th>Place Name</th>
+                                        <th>Location</th>
+                                        <th>Price</th>
+                                        <th>Bank Name</th>
                                         <th>Created At</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($tenders as $key => $tender)
+
+                                    @foreach ($participant as $key => $participate)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ $tender->tender_id }}</td>
+                                            <td>{{ $participate->tender_ref_id }}</td>
+                                            <td>{{ $participate->title }}</td>
 
-                                            <td> <a
-                                                    href="{{ route('admin.tender.showParticipants', $tender->id) }}">{{ Str::limit($tender->name, 20) }}</a>
-                                            </td>
-                                            <td>{{ $tender->govment_price }}</td>
-                                            <td>{{ $tender->shedeul_price }}</td>
-                                            <td>{{ $tender->start_date }}</td>
-                                            <td>{{ $tender->end_date }}</td>
-                                            <td>{{ $tender->created_at->format('d-M-Y') }}</td>
+                                            <td>{{ $participate->palace_name }}</td>
+                                            <td>{{ $participate->location }}</td>
+                                            <td>{{ $participate->lease_price_number }}</td>
+                                            <td>{{ $participate->bank_name }}</td>
+                                            <td>{{ $participate->created_at->format('d-M-Y') }}</td>
+
                                             <td>
-                                                @if ($tender->status == 1)
+                                                @if ($participate->status == 1)
                                                     <span class="badge bg-success">Active</span>
                                                 @else
-                                                    <span class="badge bg-danger">No Status</span>
+                                                    <span class="badge bg-danger">Pending</span>
                                                 @endif
                                             </td>
                                             <td>
-                                                <a href="{{ route('admin.tender.edit', $tender->id) }}"
+                                                 <a href="{{ route('admin.participate.show', $participate->id) }}"
                                                     class="btn btn-primary btn-icon">
-                                                    <i data-feather="edit"></i></a>
+                                                    <i data-feather="eye"></i>
+                                                </a>
 
                                                 @if (Auth::user()->role_id == 1)
-                                                    <form id="delete_form_{{ $tender->id }}"
-                                                        action="{{ route('admin.tender.destroy', $tender->id) }}"
+                                                    <form id="delete_form_{{ $participate->id }}"
+                                                        action="{{ route('admin.participate.destroy', $participate->id) }}"
                                                         method="post" class="d-inline">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="button" class="btn btn-danger btn-icon delete-button"
-                                                            onclick="deleteId({{ $tender->id }})">
+                                                            onclick="deleteId({{ $participate->id }})">
                                                             <i data-feather="trash"></i>
                                                         </button>
                                                     </form>
                                                 @endif
+                                            </td>
 
                                         </tr>
                                     @endforeach
-
                                 </tbody>
                             </table>
                         </div>
