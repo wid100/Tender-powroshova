@@ -9,7 +9,6 @@
                 <li class="breadcrumb-item active" aria-current="page">All Participate</li>
             </ol>
 
-
         </nav>
 
         <div class="row">
@@ -39,13 +38,13 @@
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $participate->tender_ref_id }}</td>
-                                            <td>{{ $participate->title }}</td>
+                                            <td>{{ Str::limit($participate->title, 25) }}</td>
 
-                                            <td>{{ $participate->palace_name }}</td>
+                                            <td>{{ Str::limit($participate->palace_name, 25) }}</td>
                                             <td>{{ $participate->location }}</td>
                                             <td>{{ $participate->lease_price_number }}</td>
                                             <td>{{ $participate->bank_name }}</td>
-                                             <td>{{ $participate->created_at->format('d-M-Y') }}</td>
+                                            <td>{{ $participate->created_at->format('d-M-Y') }}</td>
                                             <td>
                                                 @if ($participate->status == 1)
                                                     <span class="badge bg-success">Active</span>
@@ -61,7 +60,6 @@
                                                     <i data-feather="eye"></i>
                                                 </a>
 
-                                               
                                             </td>
 
                                         </tr>
