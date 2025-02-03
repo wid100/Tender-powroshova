@@ -10,6 +10,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\User\ParticipateController;
 use App\Http\Controllers\Admin\ParticipateController as AdminParticipateController;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\Admin\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,7 @@ use Illuminate\Support\Facades\Artisan;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/clear-cache', function () {
     // Clear route cache
     Artisan::call('route:clear');
@@ -45,23 +47,28 @@ Auth::routes();
 
 // Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::
-        namespace('App\Http\Controllers')->group(function () {
-            Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {
-                Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+Route::namespace('App\Http\Controllers')->group(function () {
+        Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {
+            Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
-                Route::resource('tender', 'TenderController');
-                Route::resource('participate', 'ParticipateController');
+            Route::resource('tender', 'TenderController');
+            Route::resource('participate', 'ParticipateController');
+            Route::get('/profile', 'ProfileController@profile')->name('profile');
+            Route::post('/profile/update', 'ProfileController@profileupdate')->name('profile.update');
+
+            Route::post('/profile/change-password', [ProfileController::class, 'changePassword'])->name('profile.change-password');
+            Route::get('change/password', [ProfileController::class, 'ViewPassword'])->name('view.password');
 
 
-                Route::get('/tender/{id}/participants', [TenderController::class, 'showParticipants'])->name('tender.showParticipants');
-                // Route::get('/participate/draft', [AdminParticipateController::class, 'draft'])->name('admin.participate.draft');
-            });
+
+
+            Route::get('/tender/{id}/participants', [TenderController::class, 'showParticipants'])->name('tender.showParticipants');
+            // Route::get('/participate/draft', [AdminParticipateController::class, 'draft'])->name('admin.participate.draft');
         });
+    });
 
 // ================================user AND ROUTE=============
-Route::
-        namespace('App\Http\Controllers')->group(
+Route::namespace('App\Http\Controllers')->group(
         function () {
             Route::group(['as' => 'user.', 'prefix' => 'user', 'namespace' => 'User', 'middleware' => ['auth', 'user']], function () {
                 Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
