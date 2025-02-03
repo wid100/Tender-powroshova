@@ -9,6 +9,7 @@ use App\Http\Controllers\User\SupplierController as UserSupplierController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\User\ParticipateController;
 use App\Http\Controllers\Admin\ParticipateController as AdminParticipateController;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,24 @@ use App\Http\Controllers\Admin\ParticipateController as AdminParticipateControll
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/clear-cache', function () {
+    // Clear route cache
+    Artisan::call('route:clear');
+
+    // Optimize class loading
+    Artisan::call('optimize');
+
+    // Optimize configuration loading
+    Artisan::call('config:cache');
+
+    // Optimize views loading
+    Artisan::call('view:cache');
+
+    // Additional optimizations you may want to run
+
+    return "Cache cleared and optimizations done successfully.";
+});
+
 
 Route::get('/', [HomeController::class, 'index'])->name('root');
 Auth::routes();

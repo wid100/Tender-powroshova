@@ -41,9 +41,9 @@
                                             <td>{{ Str::limit($participate->title, 25) }}</td>
 
                                             <td>{{ Str::limit($participate->palace_name, 25) }}</td>
-                                            <td>{{ $participate->location }}</td>
+                                            <td>{{ Str::limit($participate->location, 25)  }}</td>
                                             <td>{{ $participate->lease_price_number }}</td>
-                                            <td>{{ $participate->bank_name }}</td>
+                                            <td>{{  Str::limit($participate->bank_name, 25)  }}</td>
                                             <td>{{ $participate->created_at->format('d-M-Y') }}</td>
                                             <td>
                                                 @if ($participate->status == 1)

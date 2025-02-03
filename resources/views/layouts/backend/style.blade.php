@@ -20,3 +20,6 @@
 
 <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" />
 <link rel="stylesheet" href="{{ asset('assets/vendors/easymde/easymde.min.css') }}" />
+
+<link rel="stylesheet" href="{{ asset('assets/custom.css') }}" />
+

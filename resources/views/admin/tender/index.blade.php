@@ -5,11 +5,11 @@
 
         <nav class="page-breadcrumb d-flex justify-content-between align-items-center">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Packages</a></li>
-                <li class="breadcrumb-item active" aria-current="page">All Packages</li>
+                <li class="breadcrumb-item"><a href="#">Tender</a></li>
+                <li class="breadcrumb-item active" aria-current="page">All Tender</li>
             </ol>
             <a href="{{ route('admin.tender.create') }}" class="btn btn-primary active" role="button"
-                aria-pressed="true">Create Package</a>
+                aria-pressed="true">Create Tender</a>
 
         </nav>
 
@@ -17,7 +17,7 @@
             <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h6 class="card-title">Cards Table</h6>
+                        <h6 class="card-title">Tender Table</h6>
 
                         <div class="table-responsive">
                             <table id="dataTableExample" class="table">

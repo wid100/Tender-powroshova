@@ -21687,8 +21687,8 @@ div.apexcharts-canvas .apexcharts-yaxistooltip-left:after {
 }
 div.apexcharts-canvas .apexcharts-tooltip-marker {
   /*rtl:raw:
-  margin-right: 0; 
-  margin-left: 10px; 
+  margin-right: 0;
+  margin-left: 10px;
   */
 }
 
@@ -22547,7 +22547,7 @@ div.tox .tox-dialog__body {
 
 .wizard > .actions {
   /*rtl:raw:
-    text-align: left; 
+    text-align: left;
   */
 }
 
@@ -22597,3 +22597,6 @@ div.tox .tox-dialog__body {
   width: 100%;
 }
 /*# sourceMappingURL=../maps/demo2/style.css.map */
+.mce-content-body {
+    color: #fff;
+}

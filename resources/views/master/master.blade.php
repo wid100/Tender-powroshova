@@ -20,6 +20,7 @@
     <!-- End fonts -->
 
     @include('layouts.backend.style')
+
 </head>
 
 <body>

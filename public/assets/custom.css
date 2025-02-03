@@ -1,0 +1,11 @@
+body#tinymce {
+    color: #fff !important;
+}
+.mce-content-body{
+    color: #fff !important;
+}
+
+
+body#tinymce {
+    color: #fff;
+}

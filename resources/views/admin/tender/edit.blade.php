@@ -6,7 +6,7 @@
         <nav class="page-breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Forms</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Basic Elements</li>
+                <li class="breadcrumb-item active" aria-current="page">Tender</li>
             </ol>
         </nav>
 
@@ -15,7 +15,7 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h6 class="card-title">Basic Form</h6>
+                        <h6 class="card-title">Tender Form</h6>
 
                         <form class="forms-sample" action="{{ route('admin.tender.update', $tender->id) }}" method="POST"
                             enctype="multipart/form-data">
