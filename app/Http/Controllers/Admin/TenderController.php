@@ -15,12 +15,32 @@ class TenderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    // public function index()
+    // {
 
-        $tenders = Tender::get();
-        return view('admin.tender.index', compact('tenders'));
+    //     $tenders = Tender::get();
+    //     return view('admin.tender.index', compact('tenders'));
+    // }
+
+    public function index(Request $request)
+{
+    $query = Tender::query();
+
+    // Check if 'start_date' and 'end_date' are provided
+    if ($request->has('start_date') && $request->start_date && $request->has('end_date') && $request->end_date) {
+        $query->where('start_date', '>=', $request->start_date)
+              ->where('end_date', '<=', $request->end_date);
     }
+
+    // Order tenders by 'created_at' in descending order to show the latest created first
+    $tenders = $query->orderBy('created_at', 'desc')->get();
+
+    return view('admin.tender.index', compact('tenders'));
+}
+
+
+
+
     public function showParticipants($id)
     {
         $tender = Tender::with('participants')->find($id);
