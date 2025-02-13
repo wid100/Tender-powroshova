@@ -21,34 +21,35 @@
                            </tr>
                        </thead>
                        <tbody class="tender-table-body">
-                           @foreach ($participations as $tender)
-                               @php
-                                   $endDate = \Carbon\Carbon::parse($tender->end_date);
-                                   $now = \Carbon\Carbon::now();
-                               @endphp
+                        @foreach ($participations as $tender)
+                            @php
+                                $endDate = \Carbon\Carbon::parse($tender->end_date);
+                                $now = \Carbon\Carbon::now();
+                            @endphp
 
-                               <tr class="clickable-row"
-                                   onclick="window.location='{{ route('user.live-tender.show', ['id' => $tender->id]) }}';">
-                                   <td>{{ $tender->tender->tender_id }}</td>
-                                   <td>{{ $tender->tender->name }}</td>
-                                   <td>{{ $tender->tender->govment_price }}</td>
-                                   <td>{{ $tender->tender->shedeul_price }}</td>
-                                   <td>{{ $tender->tender->start_date }}</td>
-                                   <td>{{ $tender->tender->end_date }}</td>
-                                   <td>{{ $tender->created_at->format('d-m-Y') }}</td>
+                            <tr class="clickable-row"
+                                onclick="window.location='{{ route('user.live-tender.show', ['id' => $tender->tender->id]) }}';">
+                                <td>{{ $tender->tender->tender_id }}</td>
+                                <td>{{ $tender->tender->name }}</td>
+                                <td>{{ $tender->tender->govment_price }}</td>
+                                <td>{{ $tender->tender->shedeul_price }}</td>
+                                <td>{{ $tender->tender->start_date }}</td>
+                                <td>{{ $tender->tender->end_date }}</td>
+                                <td>{{ $tender->created_at->format('d-m-Y') }}</td>
 
-                                   <td>
-                                       @if ($tender->status == 0)
-                                           <span class="badge btn-primary">Pending</span>
-                                       @elseif($tender->status == 1)
-                                           <span class="badge btn-success">Accepted</span>
-                                       @else
-                                           <span class="badge btn-danger">Cancle</span>
-                                       @endif
-                                   </td>
-                               </tr>
-                           @endforeach
-                       </tbody>
+                                <td>
+                                    @if ($tender->status == 0)
+                                        <span class="badge btn-primary">Pending</span>
+                                    @elseif($tender->status == 1)
+                                        <span class="badge btn-success">Accepted</span>
+                                    @else
+                                        <span class="badge btn-danger">Cancelled</span>
+                                    @endif
+                                </td>
+                            </tr>
+                        @endforeach
+                     </tbody>
+
                    </table>
                </div>
 

@@ -58,7 +58,7 @@ Route::namespace('App\Http\Controllers')->group(function () {
 
             Route::post('/profile/change-password', [ProfileController::class, 'changePassword'])->name('profile.change-password');
             Route::get('change/password', [ProfileController::class, 'ViewPassword'])->name('view.password');
-
+            Route::get('/print/tender/{id}', 'ParticipateController@participate_print')->name('print.participate');
 
 
 

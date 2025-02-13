@@ -79,6 +79,8 @@ class DashboardController extends Controller
         $tender = Tender::find($id);
         return view('user.live-tender.show', compact('tender'));
     }
+
+
     public function ParticipateTender($id)
     {
         $tender = Tender::find($id);

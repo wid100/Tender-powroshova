@@ -69,6 +69,11 @@
                                                         </button>
                                                     </form>
                                                 @endif --}}
+
+                                                <a target="_blank" href="{{ route('admin.print.participate', $participate->id) }}"
+                                                    class="btn btn-primary btn-icon">
+                                                    <i data-feather="printer"></i>
+                                                </a>
                                             </td>
 
                                         </tr>

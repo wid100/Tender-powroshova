@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class ParticipateController extends Controller
 {
+
+
+    public function participate_print($id){
+        $participate = Participate::findOrFail($id);
+        return view("admin.participent-print", compact("participate"));
+    }
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +25,7 @@ class ParticipateController extends Controller
         // $participates = Participate::all();
         return view('admin.participate.index', compact('participates'));
     }
-    
+
     public function draft()
     {
         // Fetch participations with status 3 (draft)
