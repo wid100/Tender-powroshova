@@ -60,7 +60,8 @@
                             <div class="hero-text">
                                 <p>জনাব/ জনাবা,</p>
                                 <p>আপনাকে রামগঞ্জ পৌরসভার পক্ষ থেকে শুভেচ্ছা আপনি জেনে আনন্দিত হবেন, যে রামগঞ্জ পৌরসভার
-                                    প্রকিউরমেন্টের বিভিন্ন চাহিদার বিপরীতে টেন্ডারে অংশগ্রহণ প্রক্রিয়া আগামীতে (১৮ ফেব্রুয়ারি  ২০২৫ খ্রিস্টাব্দ) শুধু মাত্র অনলাইনে কোটেশন জমা দেয়া যাবে</p>
+                                    প্রকিউরমেন্টের বিভিন্ন চাহিদার বিপরীতে টেন্ডারে অংশগ্রহণ প্রক্রিয়া আগামীতে (১৮
+                                    ফেব্রুয়ারি ২০২৫ খ্রিস্টাব্দ) শুধু মাত্র অনলাইনে কোটেশন জমা দেয়া যাবে</p>
                                 <p>এমতাবস্থায়, অনলাইনে টেন্ডার প্রক্রিয়ায় অংশগ্রহণ করার ধাপ গুলো ও করণীয় সম্পর্কে জানতে
                                     সংযুক্ত প্রেজেন্টেশনটি দেখুন এবং ই-টেন্ডারে রেজিস্ট্রেশন করার জন্য নিচের লিঙ্কে ভিজিট
                                     করুন। <br>ই- টেন্ডার লিঙ্কঃ <a href="/">ramgonjpourashava.com/e-tender</a></p>
@@ -114,53 +115,57 @@
                         <div class="swiper-container swiper">
                             <div class="swiper-wrapper">
                                 @foreach ($tenders as $tender)
-                                    @php
-                                        $endDate = \Carbon\Carbon::parse($tender->end_date);
-                                        $now = \Carbon\Carbon::now();
-                                        $duration = $endDate->diff($now); // Calculate the difference between end date and current date
-                                        $days = $duration->d;
-                                        $hours = $duration->h;
-                                        $minutes = $duration->i;
-                                        // Check if the end date has already passed
-                                        if ($endDate < $now) {
-                                            $days = -$days;
-                                            $hours = -$hours;
-                                            $minutes = -$minutes;
-                                        }
-                                    @endphp
-                                    @if ($endDate->isFuture())
-                                        <div class="swiper-slide">
-                                            <div class="swiper-content-featured-tenders">
-                                                <p class="swipper-head-text">
-                                                    {{ $tender->name }}
-                                                </p>
-                                                <div class="counting-part">
-                                                    <span id="countdown_{{ $tender->id }}">{{ $days }}
-                                                        Days: {{ $hours }} Hrs: {{ $minutes }}
-                                                        Mins</span>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <span>Ref No:</span>
-                                                        <p>{{ $tender->tender_id }}</p>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <span>Tender Opening Date:</span>
-                                                        <p>{{ $tender->start_date }}</p>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <span>Last Submission:</span>
-                                                        <p>{{ $tender->end_date }}</p>
-                                                    </div>
+                                @php
+                                    $endDate = \Carbon\Carbon::parse($tender->end_date);
+                                    $now = \Carbon\Carbon::now();
+                                    $duration = $endDate->diff($now); // Calculate the difference between end date and current date
+                                    $days = $duration->d;
+                                    $hours = $duration->h;
+                                    $minutes = $duration->i;
 
-                                                </div>
-                                                <a href="{{ route('user.live-tender.show', ['id' => $tender->id]) }}">read
-                                                    more</a>
+                                    // Check if the end date has already passed
+                                    if ($endDate < $now) {
+                                        $days = -$days;
+                                        $hours = -$hours;
+                                        $minutes = -$minutes;
+                                    }
+
+                                    // Check if the end date is in the future or today before 2 PM
+                                    $isBefore2PM = $endDate->isToday() && $now->hour < 14; // Check if today and time is before 2 PM
+                                @endphp
+
+                                @if ($endDate->isFuture() || ($endDate->isToday() && $isBefore2PM))
+                                    <div class="swiper-slide">
+                                        <div class="swiper-content-featured-tenders">
+                                            <p class="swipper-head-text">
+                                                {{ $tender->name }}
+                                            </p>
+                                            <div class="counting-part">
+                                                <span id="countdown_{{ $tender->id }}">{{ $days }}
+                                                    Days: {{ $hours }} Hrs: {{ $minutes }}
+                                                    Mins</span>
                                             </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <span>Ref No:</span>
+                                                    <p>{{ $tender->tender_id }}</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <span>Tender Opening Date:</span>
+                                                    <p>{{ $tender->start_date }}</p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <span>Last Submission:</span>
+                                                    <p>{{ $tender->end_date }}</p>
+                                                </div>
+                                            </div>
+                                            <a href="{{ route('user.live-tender.show', ['id' => $tender->id]) }}">read
+                                                more</a>
                                         </div>
-                                    @endif
-                                @endforeach
-                                <!-- Add more slides as needed -->
+                                    </div>
+                                @endif
+                            @endforeach
+
                             </div>
                             <!-- Add navigation buttons -->
 

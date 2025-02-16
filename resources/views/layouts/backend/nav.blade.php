@@ -48,12 +48,12 @@
                             </a>
                         </li>
 
-                        {{-- <li class="dropdown-item py-2">
+                        <li class="dropdown-item py-2">
                             <a href="{{ route('admin.view.password') }}" class="text-body ms-0">
                                 <i class="me-2 icon-md" data-feather="lock"></i>
                                 <span>Change Password</span>
                             </a>
-                        </li> --}}
+                        </li>
                         <li class="dropdown-item py-2">
                             <a href="{{ route('logout') }}" class="text-body ms-0"
                                 onclick="event.preventDefault();
