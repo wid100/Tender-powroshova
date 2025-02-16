@@ -1,7 +1,7 @@
 <nav class="sidebar">
     <div class="sidebar-header">
         <a href="#" class="sidebar-brand">
-           <img src="{{asset('assets/images/logo.png')}}" class="w-75" alt="">
+            <img src="{{ asset('assets/images/logo.png') }}" class="w-75" alt="">
         </a>
         <div class="sidebar-toggler not-active">
             <span></span>
@@ -34,6 +34,20 @@
                 </ul>
             </li>
 
+
+            <li class="nav-item">
+                <ul class="nav sub-menu">
+                    @foreach ($years as $year)
+                    <li class="nav-item">
+                        <a href="{{ route('admin.tenders.year', ['year' => $year]) }}" class="nav-link">{{ $year }}</a>
+                    </li>
+                    @endforeach
+
+                </ul>
+            </li>
+
         </ul>
+
+
     </div>
 </nav>

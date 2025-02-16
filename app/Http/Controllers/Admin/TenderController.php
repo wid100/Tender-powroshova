@@ -10,6 +10,32 @@ use App\Http\Controllers\Controller;
 
 class TenderController extends Controller
 {
+
+
+
+    // public function getUniqueYears()
+    // {
+    //     $years = Tender::selectRaw('YEAR(created_at) as year')
+    //         ->distinct()
+    //         ->orderBy('year', 'desc')
+    //         ->pluck('year');
+
+    //     return view('layouts.backend.sidebar', compact('years'));
+    // }
+
+
+
+
+
+    public function getTendersByYear($year)
+    {
+        $tenders = Tender::whereYear('created_at', $year)->get();
+
+        return view('admin.tender.tenders', compact('tenders'));
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -23,20 +49,20 @@ class TenderController extends Controller
     // }
 
     public function index(Request $request)
-{
-    $query = Tender::query();
+    {
+        $query = Tender::query();
 
-    // Check if 'start_date' and 'end_date' are provided
-    if ($request->has('start_date') && $request->start_date && $request->has('end_date') && $request->end_date) {
-        $query->where('start_date', '>=', $request->start_date)
-              ->where('end_date', '<=', $request->end_date);
+        // Check if 'start_date' and 'end_date' are provided
+        if ($request->has('start_date') && $request->start_date && $request->has('end_date') && $request->end_date) {
+            $query->where('start_date', '>=', $request->start_date)
+                ->where('end_date', '<=', $request->end_date);
+        }
+
+        // Order tenders by 'created_at' in descending order to show the latest created first
+        $tenders = $query->orderBy('created_at', 'desc')->get();
+
+        return view('admin.tender.index', compact('tenders'));
     }
-
-    // Order tenders by 'created_at' in descending order to show the latest created first
-    $tenders = $query->orderBy('created_at', 'desc')->get();
-
-    return view('admin.tender.index', compact('tenders'));
-}
 
 
 
