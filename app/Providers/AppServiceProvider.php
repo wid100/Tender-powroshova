@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Models\Tender;
+use App\Models\Participate;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,10 +27,20 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer('layouts.backend.sidebar', function ($view) {
-            $years = Tender::selectRaw('YEAR(created_at) as year')
+            // Get distinct years from Tender
+            $tenderYears = Tender::selectRaw('YEAR(created_at) as year')
                 ->distinct()
                 ->orderBy('year', 'desc')
                 ->pluck('year');
+
+            // Get distinct years from Participate
+            $participateYears = Participate::selectRaw('YEAR(created_at) as year')
+                ->distinct()
+                ->orderBy('year', 'desc')
+                ->pluck('year');
+
+            // Merge the two collections and remove duplicates, then order by year
+            $years = $tenderYears->merge($participateYears)->unique()->sortDesc();
 
             $view->with('years', $years);
         });

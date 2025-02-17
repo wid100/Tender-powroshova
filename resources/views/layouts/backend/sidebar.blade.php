@@ -21,26 +21,40 @@
             <li class="nav-item nav-category">web apps</li>
 
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" href="#advancedUI" role="button" aria-expanded="false" aria-controls="advancedUI">
-                  <i class="link-icon" data-feather="anchor"></i>
-                  <span class="link-title">Tenders</span>
-                  <i class="link-arrow" data-feather="chevron-down"></i>
+                <a class="nav-link" data-bs-toggle="collapse" href="#tenderUI" role="button" aria-expanded="false" aria-controls="tenderUI">
+                    <i class="link-icon" data-feather="anchor"></i>
+                    <span class="link-title">Tenders</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
-                <div class="collapse" id="advancedUI">
-                  <ul class="nav sub-menu">
-                    <li class="nav-item">
-                        <ul class="nav sub-menu">
-                            @foreach ($years as $year)
+                <div class="collapse" id="tenderUI">
+                    <ul class="nav sub-menu">
+                        @foreach ($years as $year)
                             <li class="nav-item">
                                 <a href="{{ route('admin.tenders.year', ['year' => $year]) }}" class="nav-link">{{ $year }}</a>
                             </li>
-                            @endforeach
-
-                        </ul>
-                    </li>
-                  </ul>
+                        @endforeach
+                    </ul>
                 </div>
-              </li>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#participateUI" role="button" aria-expanded="false" aria-controls="participateUI">
+                    <i class="link-icon" data-feather="anchor"></i>
+                    <span class="link-title">Participate</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                </a>
+                <div class="collapse" id="participateUI">
+                    <ul class="nav sub-menu">
+                        @foreach ($years as $year)
+                            <li class="nav-item">
+                                <a href="{{ route('admin.participate.year', ['year' => $year]) }}" class="nav-link">{{ $year }}</a>
+
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </li>
+
 
 
             <li class="nav-item">
@@ -48,9 +62,9 @@
                     {{-- <li class="nav-item">
                         <a href="{{ route('admin.tender.index') }}" class="nav-link">Tender</a>
                     </li> --}}
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a href="{{ route('admin.participate.index') }}" class="nav-link">Participate</a>
-                    </li>
+                    </li> --}}
                     {{-- <li class="nav-item">
                       <a href="{{ route('admin.participate.draft') }}" class="nav-link">Draft Participate</a>
                     </li> --}}

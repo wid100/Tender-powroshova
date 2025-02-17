@@ -68,6 +68,8 @@ Route::namespace('App\Http\Controllers')->group(function () {
 
         Route::get('/tenders', [TenderController::class, 'getUniqueYears'])->name('tenders.index');
         Route::get('/tenders/{year}', [TenderController::class, 'getTendersByYear'])->name('tenders.year');
+        Route::get('/participate-year/{year}', [AdminParticipateController::class, 'getPreticipateByYear'])->name('participate.year');
+
     });
 });
 

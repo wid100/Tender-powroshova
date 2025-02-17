@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 class ParticipateController extends Controller
 {
 
+    public function getPreticipateByYear($year) {
+        $participates = Participate::whereYear('created_at', $year)->get();
+        return view('admin.participate.participates', compact('participates'));
+    }
+
+
 
     public function participate_print($id){
         $participate = Participate::findOrFail($id);
